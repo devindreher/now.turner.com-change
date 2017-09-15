@@ -38,10 +38,22 @@
         font-family: TurnerBold;
     }
     
-    ul.change, ul.change > li {
+    ul.change li:before {
+        background-image: none !important;
+    }
+    
+    ul.change li {
         margin-bottom: 10px;
         list-style-type: disc;
     }
+    
+/*
+    ul.change, ul.change > li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+        background-image: none;
+    }
+*/
     
     .warning {
         width: 100%;
@@ -103,6 +115,10 @@
     }
     
 /*Navigation Bar*/
+    
+    .nav-bar-in ul li:before {
+        background-image: none !important;
+    }
     
     .nav-bar-in ul {
         list-style-type: none;
@@ -187,10 +203,9 @@
 <div class="hero">
     <img src="https://s3.amazonaws.com/tpd-images/Stages-of-Transition.png">
 </div>
-<br>
 <h3>Signs of a Transition</h3>
-<p>You'll often see an increase in these 5 signs during the <i>ending</i> or <i>neutral zones</i>.</p>
 <br>
+<p>You'll often see an increase in these 5 signs during the <i>ending</i> or <i>neutral zones</i>.</p>
 <ol class="change">
     <li><h4>Guilt.</h4><p>Change creates winners and losers. Winners can feel guilty for benefitting from a change.</p></li>
     <li><h4>Resentment.</h4><p>Starting and recycling malicious behaviors, passive-aggressive behaviors, or sabotage.</p></li>
