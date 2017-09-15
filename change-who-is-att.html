@@ -1,5 +1,4 @@
-<style>
-    .separation-2 {
+<style type="text/css">.separation-2 {
         width: 100%;
         height: 100px;
         background-color: black;
@@ -38,10 +37,21 @@
         font-family: TurnerBold;
     }
     
+    ul.change li:before {
+        background-image: none !important;
+    }
+    
+    ul.change li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+    }
+    
+/*
     ul.change, ul.change > li {
         margin-bottom: 10px;
         list-style-type: disc;
     }
+*/
     
     .warning {
         width: 100%;
@@ -103,7 +113,13 @@
     }
     
 /*Navigation Bar*/
-    
+    .nav-bar-in ul li:before{
+    background-image: none  !important;
+}
+.nav-bar-in li {
+    float: left;
+    margin-bottom:0px;
+}
     .nav-bar-in ul {
         list-style-type: none;
         margin: 0;
@@ -146,19 +162,16 @@
     .timeline-container {
         width: 100%;
     }
-    
 </style>
-
 <div class="nav-bar-in">
 <ul>
-<li><a href="/change">Main</a></li>
-<li><a href="/learnnow" target="_blank">learn.turner.com</a></li>
-<li><a href="/change-individuals">Info For Individuals</a></li>
-<li><a href="/change-leaders">Info for Leaders</a></li>
-<li><a href="/change-resources">Resources</a>
-<li><a href="/change-classes">Take A Class</a></li>
-<li><a class="active" href="">Who Is AT&amp;T</a>
-</li>
+	<li><a href="/change">Main</a></li>
+	<li><a href="/learnnow" target="_blank">learn.turner.com</a></li>
+	<li><a href="/change-individuals">Info for Individuals</a></li>
+	<li><a href="/change-leaders">Info for Leaders</a></li>
+	<li><a href="/change-resources">Resources</a></li>
+	<li><a href="/change-classes">Take a Class</a></li>
+	<li><a class="active" href="">Who is AT&amp;T?</a></li>
 </ul>
 </div>
 
@@ -171,77 +184,85 @@
 <div class="small-gap">&nbsp;</div>
 
 <div class="separation-2">
-    <h4>AT&amp;T History</h4>
+<h4>AT&amp;T History</h4>
 </div>
 
-<div class="timeline-container">
-    <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=106tNLcOLg3kO1EG0riY5jSx_Rq2XR94-BFdsnmrz3A8&font=OpenSans-GentiumBook&lang=en&initial_zoom=0&height=500' width='100%' height='500' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
-</div>
+<div class="timeline-container"><iframe allowfullscreen="" frameborder="0" height="500" mozallowfullscreen="" src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=106tNLcOLg3kO1EG0riY5jSx_Rq2XR94-BFdsnmrz3A8&amp;font=OpenSans-GentiumBook&amp;lang=en&amp;initial_zoom=0&amp;height=500" webkitallowfullscreen="" width="100%"></iframe></div>
 
 <div class="small-gap">&nbsp;</div>
 
 <div class="separation-2">
-    <h4>Geographic Presence</h4>
+<h4>Geographic Presence</h4>
 </div>
 
-<div class="hero">
-    <a href="https://s3.amazonaws.com/tpd-images/ATT-Location-Map-Lg.png" target="_blank"><img src="https://s3.amazonaws.com/tpd-images/ATT-Location-Map.png" style="cursor: -moz-zoom-in; cursor: -webkit-zoom-in; cursor: zoom-in;"></a>
-</div>
+<div class="hero"><a href="https://s3.amazonaws.com/tpd-images/ATT-Location-Map-Lg.png" target="_blank"><img src="https://s3.amazonaws.com/tpd-images/ATT-Location-Map.png" style="cursor: -moz-zoom-in; cursor: -webkit-zoom-in; cursor: zoom-in;" /></a></div>
 
 <div class="small-gap">&nbsp;</div>
 
 <div class="separation-2">
-    <h4>Company Strategy</h4>
+<h4>Company Strategy</h4>
 </div>
 
 <h4>Entertainment &amp; OTT</h4>
+
 <ul class="change">
-    <li>Content on any device, anytime, any place. Create a seamless mobile and broadband experience where customers access their entertainment content on any device, enabled by AT&amp;T's mobile and broadband networks.</li>
-    <li>Bring three Fortune 100 entities, DIRECTV, AT&amp;T Wireless, and legacy AT&amp;T internet and entertainment business, under one roof.</li>
-    <li>Create an unparalleled experience for customers who subscribe to both DIRECTV and AT&amp;T Wireless &mdash; the consumption of DIRECTV content will not contribute towards mobile monthly data allowance ("zero rating").</li>
-    <li>DIRECTV Now &mdash; as nearly 60% of AT&amp;T wireless traffic is video, DIRECTV Now sets out to be the "aggregator of aggregators" with a breadth of content and exclusive offerings.</li>
+	<li>Content on any device, anytime, any place. Create a seamless mobile and broadband experience where customers access their entertainment content on any device, enabled by AT&amp;T's mobile and broadband networks.</li>
+	<li>Bring three Fortune 100 entities, DIRECTV, AT&amp;T Wireless, and legacy AT&amp;T internet and entertainment business, under one roof.</li>
+	<li>Create an unparalleled experience for customers who subscribe to both DIRECTV and AT&amp;T Wireless — the consumption of DIRECTV content will not contribute towards mobile monthly data allowance ("zero rating").</li>
+	<li>DIRECTV Now — as nearly 60% of AT&amp;T wireless traffic is video, DIRECTV Now sets out to be the "aggregator of aggregators" with a breadth of content and exclusive offerings.</li>
 </ul>
-<br>
+
+<p>&nbsp;</p>
+
 <h4>Culture &amp; Workforce Disruption</h4>
+
 <ul class="change">
-    <li>To help the transition from legacy telecom to today's IP and broadband focused marketplace, AT&amp;T has targeted 150K employees for retraining, who will complete more than two million courses in order to reposition their skills.</li>
-    <li>In 2016, ~50% of AT&amp;T's workforce had backgrounds in STEM (Science, Technology, Engineering, and Math) with the goal of 90% of jobs in 2020 requiring STEM capability in the technology organization.</li>
-    <li>To achieve the "reskilling" goal, AT&amp;T has implemented programs such as <i>Learning Portal</i> for training courses, <i>Skills Coaches</i> for personalized guidance,<i>apprenticeships</i> for real-world experiences in next-gen job opportunities, and <i>hiring processes</i> for hiring the right skill sets, including adding reskilled employees to the candidate pool.</li>
+	<li>To help the transition from legacy telecom to today's IP and broadband focused marketplace, AT&amp;T has targeted 150K employees for retraining, who will complete more than two million courses in order to reposition their skills.</li>
+	<li>In 2016, ~50% of AT&amp;T's workforce had backgrounds in STEM (Science, Technology, Engineering, and Math) with the goal of 90% of jobs in 2020 requiring STEM capability in the technology organization.</li>
+	<li>To achieve the "reskilling" goal, AT&amp;T has implemented programs such as <i>Learning Portal</i> for training courses, <i>Skills Coaches</i> for personalized guidance,<i>apprenticeships</i> for real-world experiences in next-gen job opportunities, and <i>hiring processes</i> for hiring the right skill sets, including adding reskilled employees to the candidate pool.</li>
 </ul>
-<br>
+
+<p>&nbsp;</p>
+
 <h4>Innovation</h4>
+
 <ul class="change">
-    <li><i>AT&amp;T Foundries</i> &mdash; in-house think tanks, which act as innovation engines, injecting new ideas and thought processes into the larger AT&amp;T culture.</li>
-    <li>The AT&amp;T Foundries operate in six facilities throughout the world; in 2016 the Company opened a facility in Houston focusng on connected healthcare applications.</li>
+	<li><i>AT&amp;T Foundries</i> — in-house think tanks, which act as innovation engines, injecting new ideas and thought processes into the larger AT&amp;T culture.</li>
+	<li>The AT&amp;T Foundries operate in six facilities throughout the world; in 2016 the Company opened a facility in Houston focusng on connected healthcare applications.</li>
 </ul>
 
 <div class="small-gap">&nbsp;</div>
 
 <div class="separation-2">
-    <h4>Fosting Innovation Across Six Focus Areas</h4>
+<h4>Fosting Innovation Across Six Focus Areas</h4>
 </div>
 
-<h4>Internet of Things</h4>
-<p><i>Plano Foundry</i></p>
+<h4>Internet of Things (Plano Foundry)</h4>
 <p>The Plano Foundry serves as the home of cutting-edge development around machine-to-machine solutions and connected devices.</p>
-<br><br>
+
+<br>
+
 <h4>Entertainment</h4>
 <p>Developing a point of view on the future of entertainment as it relates to OTT, content creation, artificial intelligence, and the influence of social media.</p>
-<br><br>
-<h4>Network Transformation</h4>
-<p><i>Palo Alto Foundry</i></p>
+
+<br>
+
+<h4>Network Transformation (Palo Alto Foundry)</h4>
 <p>Opening up the network to developers with tools to produce new apps and services.</p>
-<br><br>
-<h4>Connected Cars &amp; Home</h4>
-<p><i>Atlanta Foundry</i></p>
+
+<br>
+
+<h4>Connected Cars &amp; Home (Atlanta Foundry)</h4>
 <p>Focused on AT&amp;T Digital, Life, the Connected Car, and all things mobility.</p>
-<br><br>
-<h4>Connected Healthcare</h4>
-<p><i>Houston Foundry</i></p>
+
+<br>
+
+<h4>Connected Healthcare (Houston Foundry)</h4>
 <p>Dedicated to digital health innovations that can help caregivers and patients improve their quality of life.</p>
-<br><br>
-<h4>Enterprise Services &amp; Cybersecurity</h4>
-<p><i>Israel &amp; Plano Foundry</i></p>
+
+<br>
+
+<h4>Enterprise Services &amp; Cybersecurity (Israel &amp; Plano Foundry)</h4>
 <p>Seeks to improve the customer experience and explore cybersecurity solutions.</p>
 
 <div class="small-gap">&nbsp;</div>
