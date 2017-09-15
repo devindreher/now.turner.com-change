@@ -1,0 +1,483 @@
+<style type="text/css">.video-player {
+        width: 100%
+    }
+    
+    .video-player__container {
+        width: 100% !important;
+        height: auto !important;
+    }
+    
+    .background-image {
+        background-color: lightgray;
+        padding: 20px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .background-image p {
+        font-family: TurnerRegular;
+        color: black;
+        font-size: 14px !important;
+        line-height: 1.4;
+    }
+    
+    .image-container {
+        width: 75% !important;
+        height: auto !important;
+        margin: auto;
+    }
+    
+    .image-container img {
+        width: 100%;
+    }
+    
+    .background-video img {
+        width: 100%;
+    }
+    
+    .background-video {
+        background-color: lightgray;
+        padding: 20px;
+    }
+    
+    .background-video p {
+        font-family: TurnerRegular;
+        color: black;
+        font-size: 14px !important;
+        line-height: 1.4;
+    }
+    
+    video-background img {
+        border: 1px lightgrey solid;
+    }
+    
+    .separation-2 {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .separation-2 h4 {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 100px;
+    }
+    
+    .theme-content ul li:before {
+        background-image: none !important;
+    }
+    
+    .theme-content p, .theme-content ul li, .theme-content ol li {
+        margin-bottom: 0px;
+        font-family: "TurnerRegular";
+        font-size: 18px;
+        line-height: 1.7;
+        word-wrap: break-word;
+    }
+    
+    .small-gap {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        clear: both;
+    }
+    
+    .big-gap {
+        margin-top: 125px;
+        margin-bottom: 125px;
+        clear: both;
+    }
+    
+    .hero {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .hero img {
+        width: 100%;
+    }
+    
+    .main-idea {
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+    
+    hr {
+        background-color: white;
+        height: 15px;
+        margin-top: 35px;
+        color: white;
+    }
+    
+    .small-header a {
+        font-family: TurnerBold;
+        font-size: 16px;
+    }
+    
+    h4 {
+        font-family: TurnerBold;
+        font-size: 18px;
+    }
+    
+    h4 a {
+        font-family: TurnerBold;
+        font-size: 18px;
+    }
+    
+    h2, h3 {
+        font-family: TurnerBold;
+    }
+    
+    .byline a {
+        font-family: TurnerRegular;
+        font-size: 12px !important;
+        color: grey;
+        text-transform: uppercase;
+    }
+    
+/*Navigation Bar*/
+    .nav-bar-in ul li:before{
+    background-image: none  !important;
+}
+.nav-bar-in li {
+    float: left;
+    margin-bottom:0px;
+}
+    .nav-bar-in ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    .nav-bar-in li {
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-bar-in li a {
+        display: block;
+        color: white;
+        font-family: TurnerBold;
+        font-size: 14px;
+        text-align: center;
+        padding: 14px 10px;
+        text-decoration: none;
+    } 
+    
+    .nav-bar-in li a:hover:not(.active) {
+        background-color: #111;
+    }
+    
+    .nav-bar-in .active {
+        background-color: rgb(0,82,231);
+        cursor: default;
+    }
+    
+    .nav-bar-in {
+        margin-bottom: 40px;     
+    }
+    
+/*EAP Table*/
+    
+    table {
+        width: 100%;
+        border-collapse: collapse !important;
+    }
+    
+    tr:nth-of-type(odd) {
+        background: #eee;
+    }
+    
+    th {
+        background: #333;
+        color: white;
+        font-family: TurnerBold;
+    }
+    
+/*
+    td, th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerBold;
+    }
+*/
+    
+    td {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerRegular !important;
+        color: black !important;
+        font-size: 14px !important;
+        vertical-align: text-top;
+    }
+    
+    td a {
+        font-size: 14px !important;
+    }
+    
+    th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerBold !important;
+        color: white !important;
+        font-size: 14px !important;
+    }
+    
+    @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
+        
+        .eap table, thead, tbody, th, td, tr {
+            display: block;
+            font-family: TurnerRegular !important;
+            color: black !important;
+        }
+        
+        .eap thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        .eap tr {
+            border: 1px solid #ccc;
+        }
+        
+        .eap td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+        
+        .eap td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            
+        }
+        
+        .eap td:nth-of-type(1):before { content: "Resource:"; }
+        .eap td:nth-of-type(2):before { content: "How to Get in Touch:"; }
+</style>
+<div class="nav-bar-in">
+<ul>
+	<li><a href="/change">Main</a></li>
+	<li><a href="/learnnow" target="_blank">learn.turner.com</a></li>
+	<li><a href="/change-individuals">Info For Individuals</a></li>
+	<li><a href="/change-leaders">Info for Leaders</a></li>
+	<li><a class="active" href="">Resources</a></li>
+	<li><a href="/change-classes">Take A Class</a></li>
+	<li><a href="/who-is-att">Who Is AT&amp;T</a></li>
+</ul>
+</div>
+
+<h2>Change Resources</h2>
+
+<p>On this page you can find learning materials related to change:</p>
+
+<p><a href="#videos">Videos</a> | <a href="#Articles">Articles</a> | <a href="#Podcasts">Podcasts</a> | <a href="#Books">Books</a> | <a href="#EAP">Employee Assistance</a> | <a href="#Comics">For a Laugh</a></p>
+
+<hr />
+<p><a name="videos"></a></p>
+
+<h3>Videos</h3>
+
+<div class="background-video">
+<div class="video-player__container">[trn_video_1]</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="background-video">
+<div class="video-player__container">[trn_video_2]</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="background-video">
+<div class="video-player__container">[trn_video_3]</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="background-video">
+<div class="video-player__container">[trn_video_4]</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="background-video">
+<div class="video-player__container">[trn_video_5]</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="background-video">
+<div class="video-player__container">[trn_video_6]</div>
+</div>
+
+<hr />
+<p><a name="Articles"></a></p>
+
+<p>&nbsp;</p>
+
+<h3>Articles</h3>
+
+<h4 class="small-header"><a href="http://resiliencealliance.com/wp-content/uploads/Personal-Resilience-Overview1.pdf" target="_blank">Personal Resilience Overview - Resilience Alliance</a></h4>
+
+<p>"As the pace of change in the world continues to increase, managing the many disruptions in our lives has become one of the most important tasks we face. If you work in an organization, you are almost certainly involved in a number of major transitions, such as new technology, shifts in systems and structures, and reorganizations of teams and functions. You probably have additional changes affecting you and those close to you, such as health issues, moving to a new home, or changes in relationships (such as marriage, divorce, having kids, or losing loved ones)."</p>
+
+<h4 class="small-header"><a href="https://www.forbes.com/sites/johnkotter/2016/11/29/the-power-of-saying-i-dont-know/#74ed27ea1858" target="_blank">The Power of Saying No - Forbes</a></h4>
+
+<p>"We are conditioned to having and providing quick, confident answers as a sign of competence and leadership. We behave as though any gaps in knowledge should be hidden at all cost. But is this desire to have an answer - and have it quickly - actually helping you? How often do we trade factual accuracy and thoughtfulness for immediacy? Why do people find it so hard to say – 'I don’t know'?"</p>
+
+<h4 class="small-header"><a href="https://hbr.org/2013/03/change-management-is-bigger-th" target="_blank">Change Management is Bigger Than Leadership</a></h4>
+
+<p>"If an organization needs to undergo significant change, that's a leadership issue, right? Old dogs will learn new tricks when the lead dog — or ape, or penguin, depending on the management fable of the moment — shows them off. Leaders need to craft compelling elevator speeches, relentlessly deliver the message of change, and above all, walk the talk."</p>
+
+<hr />
+<p><a name="Podcasts"></a></p>
+
+<h3>Podcasts</h3>
+
+<h4 class="small-header"><a href="http://www.podcasts.com/thrive-leading-through-change-25" target="_blank">Thrive - Leading Through Change Series</a></h4>
+
+<h4 class="small-header"><a href="http://www.podcasts.com/on-leading-change-83" target="_blank">On Leading Change Series</a></h4>
+
+<hr />
+<p><a name="Books"></a></p>
+
+<h3>Books</h3>
+
+<p><br />
+<iframe allowfullscreen="" frameborder="0" height="362" src="https://read.amazon.com/kp/card?asin=B00HSNMGC2&amp;preview=newtab&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_3uzNzb2AK0Y2X&amp;hideBuy=true&amp;hideShare=true" style="max-width:100%; margin: 15px;" type="text/html" width="212"></iframe><iframe allowfullscreen="" frameborder="0" height="362" src="https://read.amazon.com/kp/card?asin=B00A07FPEO&amp;preview=newtab&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_fxzNzb93RPS1H&amp;hideBuy=true&amp;hideShare=true" style="max-width:100%; margin: 15px;" type="text/html" width="212"></iframe><iframe allowfullscreen="" frameborder="0" height="362" src="https://read.amazon.com/kp/card?asin=B0177AGPF4&amp;preview=newtab&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_hAzNzb1TYK8AK&amp;hideBuy=true&amp;hideShare=true" style="max-width:100%; margin: 15px;" type="text/html" width="212"></iframe><iframe allowfullscreen="" frameborder="0" height="362" src="https://read.amazon.com/kp/card?asin=B0030DHPGQ&amp;preview=newtab&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_MAzNzbJPBHZ1E&amp;hideBuy=true&amp;hideShare=true" style="max-width:100%; margin: 15px;" type="text/html" width="212"></iframe><iframe allowfullscreen="" frameborder="0" height="362" src="https://read.amazon.com/kp/card?asin=B002Q6XUE4&amp;preview=newtab&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_BBzNzbZDQYR3K&amp;hideBuy=true&amp;hideShare=true" style="max-width:100%; margin: 15px;" type="text/html" width="212"></iframe><iframe allowfullscreen="" frameborder="0" height="362" src="https://read.amazon.com/kp/card?asin=B00FUZQYBO&amp;preview=newtab&amp;linkCode=kpe&amp;ref_=cm_sw_r_kb_dp_a7hOzbBCAMRSZ&amp;hideBuy=true&amp;hideShare=true" style="max-width:100%" type="text/html" width="212"></iframe></p>
+
+<hr />
+<p><a name="EAP"></a></p>
+
+<h3>Employee Assistance</h3>
+
+<p>There are a variety of confidential resources to help with your concerns, including stress, coping with change, family issues, anxiety, and depression. Visit <a href="http://www.timewarnerbenefits.com" target="_blank">TimeWarnerBenefits.com</a> for more information.</p>
+
+<p><b>In EMEA?</b><br/>
+Visit the <a href="https://now.turner.com/turner-london/employee-assistance-programme" target="_blank">EMEA Employee Assistance Program.</a>
+
+<p><b>For all other locations</b><br />
+Contact your local HR representative for options available in your area.</p>
+
+<table class="eap">
+	<thead>
+		<tr>
+			<th>Resource</th>
+			<th>How to Get in Touch</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><b>Employee Assistance Program</b><br />
+			<br />
+			When you and your family members need someone to talk about life's challenges, the EAP offers you 8 free in-person or video conference counseling sessions per issue, per year. Counselors are also available on the phone 24 hours a day, 7 days a week. Additionally, on-site counseling services are available in Atlanta (CNN Center &amp; Techwood) and New York.</td>
+			<td><b>Beacon Health Options</b><br />
+			1-855-356-7336<br />
+			<a href="http://achievesolutions.net/turner" target="_blank">achievesolutions.net/turner</a><br />
+			<span style="font-size:10px;"><b>To schedule an on-site appointment:</b><br />
+			<b>ATL:</b> Call Jerri Bonner, LCSW<br />
+			404-316-1250<br />
+			<br />
+			<b>NYC:</b> Call Pat Drew, LCSW<br />
+			914-588-8243</span></td>
+		</tr>
+		<tr>
+			<td><b>Anthem Behavioral Health Resource Center</b><br />
+			<span style="font-size:12px;"><i>If you're enrolled in an Anthem medical option</i></span><br />
+			<br />
+			If you're coping with anxiety, depression, or other behavioral health concerns, the Behavioral Health Resource Center is available 24/7 to offer support.</td>
+			<td><b>Behavioral Health Resource Center</b><br />
+			1-844-857-7048<br />
+			Available any time</td>
+		</tr>
+		<tr>
+			<td><b>Anthem LiveHealth Online</b><br />
+			<span style="font-size: 12px;"><i>If you're enrolled in an Anthem medical option</i></span><br />
+			<br />
+			Get convenient counseling on your schedule. Contact LiveHealth online to schedule your video chat with a licensed therapist or psychologist, usually within 4 days or less.</td>
+			<td><b>LiveHealth Online Psychology</b><br />
+			1-844-784-8409<br />
+			7A — 11P</td>
+		</tr>
+		<tr>
+			<td><b>Kaiser Permanente Behavioral Health Services</b><br />
+			<span style="font-size: 12px;"><i>If you're enrolled in a Kaiser medical option</i></span><br />
+			<br />
+			Kaiser offers resources to help you cope with common behavioral health concerns, including emergency psychiatric services, 24/7 advice nurses, health and wellness coaches, and classes.</td>
+			<td><b>Kaiser Permanente</b><br />
+			<a href="http://www.kp.org" target="_blank">kp.org</a><br />
+			1-800-954-8000<br />
+			or 1-888-576-6225 after 7P ET</td>
+		</tr>
+	</tbody>
+</table>
+
+<hr />
+<p><a name="Comics"></a></p>
+
+<h3>For A Laugh</h3>
+
+<p class="byline"><a href="https://www.torbenrick.eu/blog/change-management/change-management-comic-strips/" target="_blank">By Torben Rick - Meliorate</a></p>
+
+<p>&nbsp;</p>
+
+<div class="background-image">
+<div class="image-container"><img src="https://s3.amazonaws.com/tpd-images/Fear-of-Change-Chicken.png" /><br />
+&nbsp;
+<p>Expecting resistance to change and planning for it from the start will allow you to effectively manage objections. Understanding the most common reasons people object to change gives you the opportunity to plan your change strategy.</p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="background-image">
+<div class="image-container"><img src="https://s3.amazonaws.com/tpd-images/Change-management-requires-leadership-clarity-and-alignment.jpg" /><br />
+&nbsp;
+<p>Many leaders still believe that "we" need to change "them" is the way forward.</p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="background-image">
+<div class="image-container"><img src="https://s3.amazonaws.com/tpd-images/Change-management-comic-What-if-we-dont-change.jpg" /><br />
+&nbsp;
+<p>Change is a constant in our business. In fact, it's the only thing that's guaranteed.</p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="background-image">
+<div class="image-container"><img src="https://s3.amazonaws.com/tpd-images/Learn-to-embrace-change-Change-management-comic-768x355.jpg" /><br />
+&nbsp;
+<p>The vast majority of companies continue to just hope their change initiatives will simply embrace the changes thrust upon them. But that approach hardly ever works.</p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="background-image">
+<div class="image-container"><img src="https://s3.amazonaws.com/tpd-images/Safe-is-risky-Change-is-changing.jpg" /><br />
+&nbsp;
+<p>It's becoming increasingly clear that change is not a once-in-a-while thing, but something that is going to be happening all the time.</p>
+</div>
+</div>

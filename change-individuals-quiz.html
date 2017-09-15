@@ -1,0 +1,729 @@
+<style>
+    
+    form {
+        font-family: TurnerBold;
+        width: 100%;
+        font-size: 16px;
+    }
+    
+     label > input {
+        left: -1000em;
+        position: absolute;
+    }    
+    
+    label > input + div {
+/*
+        cursor: pointer;
+        border-radius: 2px;
+        margin-top: 4px;
+        margin-bottom: 10px;
+        padding: 5px;
+        text-align: left;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        font-family: TurnerBold;
+        border-radius: 10px;
+*/
+        
+        -webkit-appearance: none;
+        width: 35px;
+        height: 35px;
+        border: 1px solid darkgray;
+        border-radius: 50%;
+        outline: none;
+        box-shadow: 0 0 5px 0px gray inset;
+        cursor: pointer;
+        text-align: center;
+        font-family: TurnerBold;
+        font-size: 12px;
+        padding: 10px;
+        margin: 10px 10px 10px 0;
+    }
+    
+    label > input:checked + div {
+        background-color: #ffbd00;
+        color: #000;
+    }
+    
+    label > input:hover + div {
+        background-color: #0052e7;
+        color: #fff;
+    }
+        
+    .separation-2 {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        display: table;
+    }
+    
+    .separation-2 h4 {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+    }
+    
+    .theme-content ul li:before {
+        background-image: none !important;
+    }
+    
+    .theme-content p, .theme-content ul li, .theme-content ol li {
+        margin-bottom: 0px;
+        font-family: "TurnerRegular";
+        font-size: 18px;
+        line-height: 1.7;
+        word-wrap: break-word;
+        color: black;
+    }
+    
+    .sliderLabel span {
+        font-size: 14px;
+        font-family: TurnerRegular;
+        margin: -10px;
+    }
+    
+    ol.change, ol.change > li {
+        margin-bottom: 20px;
+    }
+    
+    ol.change h4 {
+        margin-bottom: 0;
+        font-family: TurnerBold;
+    }
+    
+    ul.change, ul.change > li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+    }
+    
+    .warning {
+        width: 100%;
+        background-color: cornsilk;
+        color: black;
+        padding: 10px;
+    }
+    
+    .small-gap {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        clear: both;
+    }
+    
+    .big-gap {
+        margin-top: 125px;
+        margin-bottom: 125px;
+        clear: both;
+    }
+    
+    .hero {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .hero img {
+        width: 100%;
+    }
+    
+    .main-idea {
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+    
+    .main-idea p {
+        color: black !important;
+    }
+    
+    hr {
+        background-color: white;
+        height: 15px;
+        margin-top: 35px;
+        color: white;
+    }
+    
+    .small-header a {
+        font-family: TurnerBold;
+        text-transform: uppercase;
+    }
+    
+    h4 {
+        font-family: TurnerBold;
+        font-size: 18px;
+    }
+    
+    h2, h3 {
+        font-family: TurnerBold;
+    }
+    
+/*Navigation Bar*/
+    
+    .nav-bar-in ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    .nav-bar-in li {
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-bar-in li a {
+        display: block;
+        color: white;
+        font-family: TurnerBold;
+        font-size: 14px;
+        text-align: center;
+        padding: 14px 10px;
+        text-decoration: none;
+    } 
+    
+    .nav-bar-in li a:hover:not(.active) {
+        background-color: #111;
+    }
+    
+    .nav-bar-in .active {
+        background-color: rgb(0,82,231);
+        cursor: default;
+    }
+    
+    .nav-bar-in {
+        margin-bottom: 40px;     
+    }
+    
+/*Sliders*/
+    
+    #a-slider-handle, #a-slider-handle2, #a-slider-handle3,
+    #d-slider-handle, #d-slider-handle2, #d-slider-handle3,
+    #k-slider-handle, #k-slider-handle2, #k-slider-handle3,
+    #AB-slider-handle, #AB-slider-handle2, #AB-slider-handle3,
+    #r-slider-handle, #r-slider-handle2, #r-slider-handle3 {
+        width: 3em;
+        height: 1.6em;
+        top: 50%;
+        margin-top: -.8em;
+        text-align: center;
+        line-height: 1.6em;
+        font-family: TurnerBold !important;
+        font-weight: bold;
+    }
+    
+/*Table*/
+    
+    table {
+        width: 100%;
+        border-collapse: collapse !important;
+    }
+    
+    tr:nth-of-type(odd) {
+        background: #eee;
+    }
+    
+    th {
+        background: #333;
+        color: white;
+        font-family: TurnerBold;
+    }
+    
+    
+    td {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerRegular !important;
+        color: black !important;
+        font-size: 14px !important;
+        vertical-align: text-top;
+    }
+    
+    th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerBold !important;
+        color: white !important;
+        font-size: 14px !important;
+    }
+    
+    @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
+        
+        .results table, thead, tbody, th, td, tr {
+            display: block;
+            font-family: TurnerRegular !important;
+            color: black !important;
+        }
+        
+        .results thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        .results tr {
+            border: 1px solid #ccc;
+        }
+        
+        .results td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+        
+        .results td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            
+        }
+        
+        .results td:nth-of-type(1):before { content: "Awareness:"; font-family: TurnerBold; }
+        .results td:nth-of-type(2):before { content: "Desire:"; font-family: TurnerBold; }
+        .results td:nth-of-type(3):before { content: "Knowledge:"; font-family: TurnerBold; }
+        .results td:nth-of-type(4):before { content: "Ability:"; font-family: TurnerBold; }
+        .results td:nth-of-type(5):before { content: "Reinforcement:"; font-family: TurnerBold; }
+    
+    
+    
+</style>
+
+<div class="nav-bar-in">
+<ul>
+<li><a href="/change">Main</a></li>
+<li><a href="learn.turner.com" target="_blank">learn.turner.com</a></li>
+<li><a href="/change-individuals">Info For Individuals</a></li>
+<li><a href="/change-leaders">Info for Leaders</a></li>
+<li><a href="/change-resources">Resources</a>
+<li><a href="/change-classes">Take A Class</a></li>
+<li><a href="/who-is-att">Who Is AT&amp;T</a>
+</li>
+</ul>
+</div>
+
+<h2>Assess Your Change Challenges</h2>
+
+<p>Complete this assessment by ranking the statements by how much you strongly agree (5) or strongly disagree (1) with the statement. Drag the sliders (or tap, if you're on mobile) to the number that best represents your response.</p>
+
+<p>&nbsp;</p>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script type="text/javascript">
+    
+$(function(){
+    
+    var aHandle = $("#a-slider-handle");
+    var aHandle2 = $("#a-slider-handle2");
+    var aHandle3 = $("#a-slider-handle3");
+    
+    var dHandle = $("#d-slider-handle");
+    var dHandle2 = $("#d-slider-handle2");
+    var dHandle3 = $("#d-slider-handle3");
+    
+    var kHandle = $("#k-slider-handle");
+    var kHandle2 = $("#k-slider-handle2");
+    var kHandle3 = $("#k-slider-handle3");
+    
+    var ABHandle = $("#AB-slider-handle");
+    var ABHandle2 = $("#AB-slider-handle2");
+    var ABHandle3 = $("#AB-slider-handle3");  
+    
+    var rHandle = $("#r-slider-handle");
+    var rHandle2 = $("#r-slider-handle2");
+    var rHandle3 = $("#r-slider-handle3");
+    
+//AWARENESS SLIDERS
+    
+    $( "#a-sliderOne" ).slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        aHandle.text( $( this ).slider( "value" ) );
+        },
+        slide: function( event, ui ) {
+        aHandle.text( ui.value );
+        $("#a-sliderSum").text(ui.value + $("#a-sliderTwo").slider("value") + $("#a-sliderThree").slider("value"));
+        }
+    });
+    
+    $("#a-sliderTwo").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        aHandle2.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            aHandle2.text( ui.value );
+            $("#a-sliderSum").text(ui.value + $("#a-sliderOne").slider("value") + $("#a-sliderThree").slider("value"));
+        }
+    });
+        
+    $("#a-sliderThree").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        aHandle3.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            aHandle3.text( ui.value );
+            $("#a-sliderSum").text(ui.value + $("#a-sliderOne").slider("value") + $("#a-sliderTwo").slider("value"));
+        }
+    });
+    
+//DESIRE SLIDERS
+    
+    $( "#d-sliderOne" ).slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        dHandle.text( $( this ).slider( "value" ) );
+        },
+        slide: function( event, ui ) {
+        dHandle.text( ui.value );
+        $("#d-sliderSum").text(ui.value + $("#d-sliderTwo").slider("value") + $("#d-sliderThree").slider("value"));
+        }
+    });
+    
+    $("#d-sliderTwo").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        dHandle2.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            dHandle2.text( ui.value );
+            $("#d-sliderSum").text(ui.value + $("#d-sliderOne").slider("value") + $("#d-sliderThree").slider("value"));
+        }
+    });
+        
+    $("#d-sliderThree").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        dHandle3.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            dHandle3.text( ui.value );
+            $("#d-sliderSum").text(ui.value + $("#d-sliderOne").slider("value") + $("#d-sliderTwo").slider("value"));
+        }
+    });
+
+//KNOWLEDGE SLIDERS
+    
+    $( "#k-sliderOne" ).slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        kHandle.text( $( this ).slider( "value" ) );
+        },
+        slide: function( event, ui ) {
+        kHandle.text( ui.value );
+        $("#k-sliderSum").text(ui.value + $("#k-sliderTwo").slider("value") + $("#k-sliderThree").slider("value"));
+        }
+    });
+    
+    $("#k-sliderTwo").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        kHandle2.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            kHandle2.text( ui.value );
+            $("#k-sliderSum").text(ui.value + $("#k-sliderOne").slider("value") + $("#k-sliderThree").slider("value"));
+        }
+    });
+        
+    $("#k-sliderThree").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        kHandle3.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            kHandle3.text( ui.value );
+            $("#k-sliderSum").text(ui.value + $("#k-sliderOne").slider("value") + $("#k-sliderTwo").slider("value"));
+        }
+    });
+    
+//ABILITY SLIDERS
+    
+    $( "#AB-sliderOne" ).slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        ABHandle.text( $( this ).slider( "value" ) );
+        },
+        slide: function( event, ui ) {
+        ABHandle.text( ui.value );
+        $("#AB-sliderSum").text(ui.value + $("#AB-sliderTwo").slider("value") + $("#AB-sliderThree").slider("value"));
+        }
+    });
+    
+    $("#AB-sliderTwo").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        ABHandle2.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            ABHandle2.text( ui.value );
+            $("#AB-sliderSum").text(ui.value + $("#AB-sliderOne").slider("value") + $("#AB-sliderThree").slider("value"));
+        }
+    });
+        
+    $("#AB-sliderThree").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        ABHandle3.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            ABHandle3.text( ui.value );
+            $("#AB-sliderSum").text(ui.value + $("#AB-sliderOne").slider("value") + $("#AB-sliderTwo").slider("value"));
+        }
+    });
+    
+//REINFORCEMENT SLIDERS
+    
+        $( "#r-sliderOne" ).slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        rHandle.text( $( this ).slider( "value" ) );
+        },
+        slide: function( event, ui ) {
+        rHandle.text( ui.value );
+        $("#r-sliderSum").text(ui.value + $("#r-sliderTwo").slider("value") + $("#r-sliderThree").slider("value"));
+        }
+    });
+    
+    $("#r-sliderTwo").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        rHandle2.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            rHandle2.text( ui.value );
+            $("#r-sliderSum").text(ui.value + $("#r-sliderOne").slider("value") + $("#r-sliderThree").slider("value"));
+        }
+    });
+        
+    $("#r-sliderThree").slider({
+        value: 1,
+        min: 1,
+        max: 5,
+        create: function() {
+        rHandle3.text( $( this ).slider( "value" ) );
+        },
+        slide: function(event, ui) {
+            rHandle3.text( ui.value );
+            $("#r-sliderSum").text(ui.value + $("#r-sliderOne").slider("value") + $("#r-sliderTwo").slider("value"));
+        }
+    });
+    
+});
+    
+</script>
+
+<div style="background-color: #f8f8f8; padding: 20px; width: 100%;">
+    
+    <h4>Awareness Of the Need For Change</h4>
+    
+    <p>I understand the business reason for change.</p>
+    <div id="a-sliderOne" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="a-slider-handle" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>I understand the risks of not changing.</p>
+    <div id="a-sliderTwo" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="a-slider-handle2" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>I understand the impact the change has on my day-to-day work activities.</p>
+    <div id="a-sliderThree" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="a-slider-handle3" class="ui-slider-handle"></div>
+    </div>
+
+</div>
+
+<div style="padding: 20px; width: 100%;">
+
+    <h4>Desire to Support &amp; Participate In the Change</h4>
+    
+    <p>I am personally motivated to be a part of the change.</p>
+    <div id="d-sliderOne" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="d-slider-handle" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>I look forward to the new, changed environment.</p>
+    <div id="d-sliderTwo" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="d-slider-handle2" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>My peers support the change.</p>
+    <div id="d-sliderThree" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="d-slider-handle3" class="ui-slider-handle"></div>
+    </div>
+
+</div>
+
+<div style="background-color: #f8f8f8; padding: 20px; width: 100%;">
+    
+    <h4>Knowledge of How to Change</h4>
+    
+    <p>I have the skills and knowledge to be successful <i>during</i> the change.</p>
+    <div id="k-sliderOne" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="k-slider-handle" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>I have the skills and knowledge to be successful <i>after</i> the change.</p>
+    <div id="k-sliderTwo" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="k-slider-handle2" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>Training has been adequate to prepare me for the environment after the change.</p>
+    <div id="k-sliderThree" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="k-slider-handle3" class="ui-slider-handle"></div>
+    </div>
+    
+</div>
+
+<div style="padding: 20px; width: 100%;">
+
+<h4>Ability to Implement Required Skills &amp; Behaviors</h4>
+    
+    <p>I have the ability to perform the new duties required by the change.</p>
+    <div id="AB-sliderOne" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="AB-slider-handle" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>I can get support when I have problems and questions.</p>
+    <div id="AB-sliderTwo" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="AB-slider-handle2" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>I have practice at performing in the new environment.</p>
+    <div id="AB-sliderThree" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="AB-slider-handle3" class="ui-slider-handle"></div>
+    </div>
+    
+</div>
+
+<div style="background-color: #f8f8f8; padding: 20px; width: 100%;">
+
+    <h4>Reinforcement &amp; Sustainment of the Change</h4>
+    
+    <p>The organization is committed to keeping the change in place.</p>
+    <div id="r-sliderOne" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="r-slider-handle" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>I know the consequences of not performing new activities.</p>
+    <div id="r-sliderTwo" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="r-slider-handle2" class="ui-slider-handle"></div>
+    </div>
+
+    <br>
+
+    <p>I am rewarded for performing in the new way.</p>
+    <div id="r-sliderThree" style="width: 75%; margin: 10px 0 10px 0;">
+        <div id="r-slider-handle3" class="ui-slider-handle"></div>
+    </div>
+    
+</div>
+    
+<hr>
+
+<h3>Your Results</h3>
+
+<table class="results">
+    <thead>
+        <tr>
+            <th>Awareness</th>
+            <th>Desire</th>
+            <th>Kowledge</th>
+            <th>Ability</th>
+            <th>Reinforcement</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+            <span id="a-sliderSum" style="font-family: TurnerBold;">3</span>/15
+            </td>
+            <td>
+            <span id="d-sliderSum" style="font-family: TurnerBold;">3</span>/15
+            </td>
+            <td>
+            <span id="k-sliderSum" style="font-family: TurnerBold;">3</span>/15
+            </td>
+            <td>
+            <span id="AB-sliderSum" style="font-family: TurnerBold;">3</span>/15
+            </td>
+            <td>
+            <span id="r-sliderSum" style="font-family: TurnerBold;">3</span>/15
+            </td>
+        </tr>
+    </tbody>
+</table>
+    
+<p>&nbsp;</p>
+
+<p>Now that you've responded to those questions, take a moment to reflect.</p>
+<br>
+<p><b>Which areas of change were the lowest for you?</b><br>
+Those areas represent where you might require additional support.</p>
+<br>
+<p><b>Which areas of change were the highest for you?</b><br>
+These can be considered where you are currently strong. How might you leverage those strengths to help support your leadership or your peers?</p>
+<br>
+<p>Finally, after looking at your responses, what kind of support could you ask from your leader? Make a list of these requests and plan to talk about them with your leader at your next 1:1 meeting.</p>
+
+<div class="small-gap">&nbsp;</div>

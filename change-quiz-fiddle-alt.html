@@ -1,0 +1,540 @@
+<style>
+    
+    .separation-2 {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        display: table;
+    }
+    
+    .separation-2 h4 {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+    }
+    
+    .theme-content ul li:before {
+        background-image: none !important;
+    }
+    
+    .theme-content p, .theme-content ul li, .theme-content ol li {
+        margin-bottom: 0px;
+        font-family: "TurnerRegular";
+        font-size: 18px;
+        line-height: 1.7;
+        word-wrap: break-word;
+        color: black;
+    }
+    
+    ol.change, ol.change > li {
+        margin-bottom: 20px;
+    }
+    
+    ol.change h4 {
+        margin-bottom: 0;
+        font-family: TurnerBold;
+    }
+    
+    ul.change, ul.change > li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+    }
+    
+    .warning {
+        width: 100%;
+        background-color: cornsilk;
+        color: black;
+        padding: 10px;
+    }
+    
+    .small-gap {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        clear: both;
+    }
+    
+    .big-gap {
+        margin-top: 125px;
+        margin-bottom: 125px;
+        clear: both;
+    }
+    
+    .hero {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .hero img {
+        width: 100%;
+    }
+    
+    .main-idea {
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+    
+    .main-idea p {
+        color: black !important;
+    }
+    
+    hr {
+        background-color: white;
+        height: 15px;
+        margin-top: 35px;
+        color: white;
+    }
+    
+    .small-header a {
+        font-family: TurnerBold;
+        text-transform: uppercase;
+    }
+    
+    h4 {
+        font-family: TurnerBold;
+        font-size: 18px;
+    }
+    
+    h2, h3 {
+        font-family: TurnerBold;
+    }
+    
+/*Quiz*/
+    
+    label > input {
+        left: -1000em;
+        position: absolute;
+    }    
+    
+    label > input + div {
+
+        -webkit-appearance: none;
+        width: 35px;
+        height: 35px;
+        border: 1px solid darkgray;
+        border-radius: 50%;
+        outline: none;
+        box-shadow: 0 0 5px 0px gray inset;
+        cursor: pointer;
+        text-align: center;
+        font-family: TurnerBold;
+        font-size: 12px;
+        padding: 10px;
+        margin: 10px 10px 10px 0;
+        float: left;
+    }
+    
+    label > input:checked + div {
+        background-color: #ffbd00;
+        color: #000;
+    }
+    
+    label > input:hover + div {
+        background-color: #0052e7;
+        color: #fff;
+    }
+    
+    .results {
+        font-family: TurnerBold;
+        font-size: 18px;
+        width: 25%;
+        background-color: lightgrey;
+        padding: 10px;
+    }
+    
+/*Navigation Bar*/
+    
+    .nav-bar-in ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    .nav-bar-in li {
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-bar-in li a {
+        display: block;
+        color: white;
+        font-family: TurnerBold;
+        font-size: 14px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    } 
+    
+    .nav-bar-in li a:hover:not(.active) {
+        background-color: #111;
+    }
+    
+    .nav-bar-in .active {
+        background-color: rgb(0,82,231);
+        cursor: default;
+    }
+    
+    .nav-bar-in {
+        margin-bottom: 40px;     
+    }
+    
+</style>
+
+<div class="nav-bar-in">
+<ul>
+<li><a href="/change">Main</a></li>
+<li><a href="learn.turner.com" target="_blank">learn.turner.com</a></li>
+<li><a href="/change-individuals">Info For Individuals</a></li>
+<li><a href="/change-leaders">Info for Leaders</a></li>
+<li><a href="/change-resources">Resources</a>
+<li><a href="/change-classes">Take A Class</a></li>
+</li>
+</ul>
+</div>
+
+<h2>How will this change impact you &amp; your team?</h2>
+<p>Change is coming, but how much will impact you and your team? This handy quiz will help you determine specific areas that this change will impact.</p>
+<br><br>
+<h3>Instructions:</h3>
+<p>Answer each question from the perspective of your team and their experience with the concept of this change. Think of only your team, not your entire organization.</p>
+<hr>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+<script> 
+$(document).ready(function(){
+  var sum = 0;
+
+  function updateSum(){
+    sum = 0;
+    $('input:checked').each(function(){
+    sum = sum + parseFloat($(this).val());
+    });
+    var totalIn$ = sum;
+    $('#sumTotal').text(totalIn$);
+  }
+ 
+  $('input').change(function(){
+    updateSum();
+  });
+  
+  updateSum();
+})
+</script>
+
+<!--QUIZ-->
+
+<!--Q1-->
+
+    <b>How satisfied are the employees with the current state of the business?</b><br>
+    <b>(1 = Dissatisfied // 5 = Satisfied)</b><br>
+    <label>
+        <input type="radio" name="q1" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q1" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q1" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q1" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q1" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q2-->
+
+    <b>How have employees viewed past changes?</b><br>
+    <b>(1 = Positively // 5 = Negatively)</b><br>
+    <label>
+        <input type="radio" name="q2" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q2" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q2" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q2" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q2" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q3-->
+
+    <b>Do you have any changes going on now besides this one?</b><br>
+    <b>(1 = Very Few Underway // 5 = Everything is Changing!)</b><br>
+    <label>
+        <input type="radio" name="q3" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q3" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q3" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q3" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q3" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q4-->
+
+    <b>How well were your past changes managed?</b><br>
+    <b>(1 = Well-Managed // 5 = Poorly Managed)</b><br>
+    <label>
+        <input type="radio" name="q4" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q4" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q4" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q4" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q4" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q5-->
+
+    <b>Is the a shared vision and direction for the organization?</b><br>
+    <b>(1 = Shared &amp; Unified // 5 = Different &amp; Shifting)</b><br>
+    <label>
+        <input type="radio" name="q5" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q5" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q5" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q5" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q5" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q6-->
+
+    <b>How open are people to new ideas &amp; change?</b><br>
+    <b>(1 = Open &amp; Receptive // 5 = Closed &amp; Resistant)</b><br>
+    <label>
+        <input type="radio" name="q6" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q6" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q6" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q6" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q6" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q7-->
+
+    <b>What are employees rewarded for?</b><br>
+    <b>(1 = Embracing Change &amp; Risk-Taking // 5 = Consistency &amp; Predictability)</b><br>
+    <label>
+        <input type="radio" name="q7" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q7" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q7" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q7" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q7" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q8-->
+
+    <b>How is leadership power distributed?</b><br>
+    <b>(1 = Centralized // 5 = Distributed)</b><br>
+    <label>
+        <input type="radio" name="q8" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q8" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q8" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q8" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q8" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q9-->
+
+    <b>How do <i>senior leaders</i> demonstrate change competency?</b><br>
+    <b>(1 = Effectively // 5 = Lack Skills &amp; Knowledge)</b><br>
+    <label>
+        <input type="radio" name="q9" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q9" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q9" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q9" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q9" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q10-->
+
+    <b>How do <i>managers</i> demonstrate change competecy?</b><br>
+    <b>(1 = Effectively // 5 = Lack Skills &amp; Knowledge)</b><br>
+    <label>
+        <input type="radio" name="q10" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q10" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q10" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q10" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q10" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Q11-->
+
+    <b>How well do <i>employees</i> manage change?</b><br>
+    <b>(1 = Very Well // 5 = Poorly)</b><br>
+    <label>
+        <input type="radio" name="q11" value="1">
+        <div>1</div>
+    </label>
+    <label>
+        <input type="radio" name="q11" value="2">
+        <div>2</div>
+    </label>
+    <label>
+        <input type="radio" name="q11" value="3">
+        <div>3</div>
+    </label>   
+    <label>
+        <input type="radio" name="q11" value="4">
+        <div>4</div>
+    </label>
+    <label>
+        <input type="radio" name="q11" value="5">
+        <div>5</div>
+    </label>
+
+<div class="small-gap">&nbsp;</div>
+
+<!--Quiz Total-->
+
+<div class="results">
+    <p>Sum of Responses: <span id="sumTotal">0</span></p>
+</div>
+
+<h3>If the sum of your responses is 32 or greater, your team is most likely change resistant.</h3><br>
+<p>If your team has the potential to be resistant, it may require more change management attention. The tools here will help you manage change and deal with any resistance you may experience.</p>
+
+<div class="small-gap">&nbsp;</div>

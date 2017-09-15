@@ -1,0 +1,552 @@
+<style>
+    .separation-2 {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        display: table;
+    }
+    
+    .separation-2 h4 {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+    }
+    
+    .theme-content ul li:before {
+        background-image: none !important;
+    }
+    
+    .theme-content p, .theme-content ul li, .theme-content ol li {
+        margin-bottom: 0px;
+        font-family: "TurnerRegular";
+        font-size: 18px;
+        line-height: 1.7;
+        word-wrap: break-word;
+        color: black;
+    }
+    
+    .small-gap {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        clear: both;
+    }
+    
+    .big-gap {
+        margin-top: 125px;
+        margin-bottom: 125px;
+        clear: both;
+    }
+    
+    .hero {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .hero img {
+        width: 100%;
+    }
+    
+    .main-idea {
+        background-color: whitesmoke;
+        padding: 20px;
+    }
+    
+    .main-idea p {
+        color: black !important;
+    }
+    
+    hr {
+        background-color: white;
+        height: 15px;
+        margin-top: 35px;
+        color: white;
+    }
+    
+    .small-header a {
+        font-family: TurnerBold;
+        text-transform: uppercase;
+    }
+    
+    h4 {
+        font-family: TurnerBold;
+        font-size: 18px;
+    }
+    
+    ol.change, ol.change > li {
+        margin-bottom: 20px;
+    }
+    
+    ol.change h4 {
+        margin-bottom: 0;
+        font-family: TurnerBold;
+    }
+    
+    ul.change, ul.change > li {
+        margin-bottom: 10px;
+        list-style-type: disc;
+        font-size: 14px;
+    }
+    
+/*Navigation Bar*/
+    
+    .nav-bar-in ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    .nav-bar-in li {
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-bar-in li a {
+        display: block;
+        color: white;
+        font-family: TurnerBold;
+        font-size: 14px;
+        text-align: center;
+        padding: 14px 10px;
+        text-decoration: none;
+    } 
+    
+    .nav-bar-in li a:hover:not(.active) {
+        background-color: #111;
+    }
+    
+    .nav-bar-in .active {
+        background-color: rgb(0,82,231);
+        cursor: default;
+    }
+    
+    .nav-bar-in {
+        margin-bottom: 40px;     
+    }
+    
+/*Strategy Table*/
+    
+    table {
+        width: 100%;
+        border-collapse: collapse !important;
+    }
+    
+    tr:nth-of-type(odd) {
+        background: #eee;
+    }
+    
+    th {
+        background: #333;
+        color: white;
+        font-family: TurnerBold;
+    }
+    
+/*
+    td, th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerBold;
+    }
+*/
+    
+    td {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerRegular !important;
+        color: black !important;
+        font-size: 14px !important;
+        vertical-align: text-top;
+    }
+    
+    th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerBold !important;
+        color: white !important;
+        font-size: 14px !important;
+    }
+    
+    @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
+        
+        .strategy table, thead, tbody, th, td, tr {
+            display: block;
+            font-family: TurnerRegular !important;
+            color: black !important;
+        }
+        
+        .strategy thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        .strategy tr {
+            border: 1px solid #ccc;
+        }
+        
+        .strategy td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+        
+        .strategy td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            
+        }
+        
+        .strategy td:nth-of-type(1):before { content: "Strategy:"; }
+        .strategy td:nth-of-type(2):before { content: "What is it:"; }
+        .strategy td:nth-of-type(3):before { content: "Tips & Tactics:"; }
+        .strategy td:nth-of-type(4):before { content: "Practical Application:"; }
+
+        .resilience table, thead, tbody, th, td, tr {
+            display: block;
+            font-family: TurnerRegular !important;
+            color: black !important;
+        }
+        
+        .resilience thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        .resilience tr {
+            border: 1px solid #ccc;
+        }
+        
+        .resilience td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+        
+        .resilience td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            
+        }
+        
+        .resilience td:nth-of-type(1):before { content: "Resiliency Muscle:"; }
+        .resilience td:nth-of-type(2):before { content: "Characteristic:"; }
+        .resilience td:nth-of-type(3):before { content: "Tips & Tactics:"; }
+    }    
+        
+</style>
+
+<div class="nav-bar-in">
+<ul>
+<li><a href="/change">Main</a></li>
+<li><a href="/learnnow" target="_blank">learn.turner.com</a></li>
+<li><a class="active" href="">Info For Individuals</a></li>
+<li><a href="/change-leaders">Info for Leaders</a></li>
+<li><a href="/change-resources">Resources</a>
+<li><a href="/change-classes">Take A Class</a></li>
+<li><a href="/who-is-att">Who Is AT&amp;T</a>
+</li>
+</ul>
+</div>
+<h2>Ready. Set. Change!</h2>
+<h5>Preparing yourself for navigating through change.</h5>
+<p>Change. Sometimes you're all for it. Other times it "happens" to you whether you like it or not. Every change &mdash; personal or professional &mdash; requires you to think and act differently than you do during "normal" times.</p>
+<br>
+<p>The good news is, the patterns of every kind of change are consistent. Even if you're in the middle of overwhelming change, you can shift the way you approach things and regain control.</p>
+<Br>
+<p><a href="/learnnow">Turner People Development</a> has you covered. Please find the tools and information you might need to help you capture and regain control of your approach and journey through change.</p>
+
+<div class="small-gap">&nbsp;</div>
+    
+<!--Our reactions to change-->
+
+<div class="separation-2">
+<h4>Our reactions to change &amp; how we transition</h4>
+</div>
+
+<div class="main-idea">
+    <p>Let's get some definitions out of the way first. <strong><i>Changes</i></strong> are events that are situational and external to us. <strong><i>Transitions</i></strong> are processes &mdash; psychological reorientations, if you will.</p>
+</div>
+<br>
+<p>Individuals transition through disruption or change <b>at their own pace.</b> Many go through these three stages below quickly. Others go through in a more measured manner. This should help you understand your reactions and feelings in relation to the natural process of dealing with change.</p>
+<br> 
+<div class="hero"><img src="https://s3.amazonaws.com/tpd-images/Transition-Map.png"></div>
+<br>
+<h4>Practical Application</h4>
+<p>Take a change or disruption you're experiencing now, either personally or at work. Where do you see yourself on this chart? How does this information help you better plan for your approaches for managing change? How could you focus your energy that gives you the most "bang" out of your efforts?</p>
+    
+<div class="small-gap">&nbsp;</div>
+<div class="small-gap">&nbsp;</div>
+
+<div class="separation-2">
+    <h4>Assess Your Change Challenges</h4>
+</div>
+    
+<div class="main-idea">
+    <p>Assessing your understanding of the change and challenges in your work environment helps identify the types of support you might desire and guide your requests of leadership.</p>
+    
+    <p>This self-assessment allows you to identify your level of agreement across common individual needs during change.</p>
+    
+    <br>
+    
+    <p><a href="/change-individuals-quiz">Take the self-assessment.</a>
+</div>
+    
+<div class="small-gap">&nbsp;</div>
+<div class="small-gap">&nbsp;</div>
+    
+<div class="separation-2">
+    <h4>3 Strategies to Manage Disruption</h4>
+</div>
+    
+<div class="main-idea">
+    <p>There are three basic strategies for dealing with challenges. Each of these strategies is useful in certain situations and you will often use a combination of them.</p>
+</div>
+
+<br>
+    
+<table class="strategy">
+    <thead>
+        <tr>
+            <th>Strategy</th>
+            <th>What is it</th>
+            <th>Tips &amp; Tactics</th>
+            <th>Practical Application</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+            Reframe the challenge
+            </td>
+            <td>
+            Redefine the situation in a way that reduces or resolves the challenge.
+            </td>
+            <td>
+            Recognize the difference between facts of a situation and the stories you create to explain them.<br><br>
+            Question your explanation of the cause. Ask yourself if there are other ways to think about your situation.<br><br>
+            Ask yourself how someone you know that is generally optimistic might view the situation &mdash; put yourself in their POV for a second.<br><br>
+            Shift your view of something from a threat to an opportunity.<br><br>
+            </td>
+            <td>
+            Think of a challenge you are currently facing. Can you reframe it or some aspect of it as an opportunity or look at it in a way that reduces its impact on you?
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Change the Situation
+            </td>
+            <td>
+            Do something to change reality.
+            </td>
+            <td>
+            Fix the real problem. Get to the root of the problem.<br><br>
+            Select the right tools. Changing a situation depends on the situation and not every "tool" is going to work, which is why you may feel frustrated. Broaden your toolkit.<br><br>
+            Use your influence &mdash; the key to changing many situations is getting others to shift their thoughts or actions. Rewards, expertise, authority, or character can help.
+            </td>
+            <td>
+            Think of a challenge you are currently facing. Are there things you can do to alter the situation and reduce the level of adversity you are experiencing or reduce the duration of the challenge? What tools and forms of influence can you apply?
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Accept What It Is
+            </td>
+            <td>
+            Adjust your mental model of the world to include the new reality.
+            </td>
+            <td>
+            Not every situation can be reframed or changed, so you need to spend time on reflecting on how you adapt yourself to the new reality.<br><br>
+            Create more accurate expectations. Shift them as well as your thoughts and behaviors to adjust to the new situation as it is.<br><br>
+            If you accept the notion of endless change, you are more likely to recognize when it's time to adjust to a new reality instead of holding on to an old pattern.<br><br>
+            Set your ego aside.<br><br>
+            Connect with others who are experiencing similar changes.
+            </td>
+            <td>
+            Think of a challenge you are currently facing. What elements of it are out of your control? What can you do to adjust to a new reality that you may not be happy about?
+            </td>
+        </tr>
+    </tbody>
+</table>
+    
+<div class="small-gap">&nbsp;</div>
+<div class="small-gap">&nbsp;</div>
+    
+<div class="separation-2">
+    <h4>Resilience</h4>
+</div>
+    
+<div class="main-idea">
+    <p>Resilient people have cultivated seven characteristics to help them solve problems more efficiently, wasting less energy in the process of dealing with challenges. Everyone has these resilience "muscles" and they can be strengthened (or weakened). Regular practice and use will build them up and help you conserve your energy when dealing with change.</p>
+    <br>
+    <p><b>How have you used each resilience muscle to overcome a challenge? How balanced do you think or feel your resilience muscles are? Which ones do you tend to underuse? Overuse?</b></p>
+</div>
+    
+<br>
+    
+<table class="resilience">
+    <thead>
+        <tr>
+            <th>Resiliency Muscle</th>
+            <th>Characteristic</th>
+            <th>Tips and Tactics</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Positivity</td>
+            <td>They find hope and possibility in the midst of difficult situations.</td>
+            <td>
+            Change the stories you tell yourself<br><br>
+            Pay attention to the positive<br><br>
+            Find bright spots in the darkness
+            </td>
+        </tr>
+        <tr>
+            <td>Confidence</td>
+            <td>They recognize and use their skills and abilities.</td>
+            <td>
+            Understand your strengths.<br><br>
+            Focus on learning<br><br>
+            Treat yourself like a friend
+            </td>
+        </tr>
+        <tr>
+            <td>Priorities</td>
+            <td>They identify and pay attention to the most important things.</td>
+            <td>
+            Simplify<br><br>
+            Practice saying no<br><br>
+            Set goals
+            </td>
+        </tr>
+        <tr>
+            <td>Creativity</td>
+            <td>They generate a range of possibilities and options.</td>
+            <td>
+            Think "yes/and"<br><br>
+            Let ideas flow<br><br>
+            Resist judgment
+            </td>
+        </tr>
+        <tr>
+            <td>Connection</td>
+            <td>They reach out to others for help and support.</td>
+            <td>
+            Invest time in developing strong relationships<br><br>
+            Initiate communication<br><br>
+            Ask for help<br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Structure</td>
+            <td>They create and apply disciplined approaches.</td>
+            <td>
+            Find systems/processes that work for you<br><br>
+            Plan your time<br><br>
+            Create good habits
+            </td>
+        </tr>
+        <tr>
+            <td>Experimenting</td>
+            <td>They try new and different strategies</td>
+            <td>
+            Be curious<br><br>
+            Take small steps<br><br>
+            Reflect on your experience
+            </td>
+        </tr>
+    </tbody>
+</table>
+    
+<hr>
+    
+<!--Mailchimp Sign-Up-->
+
+<h5>Sign up to receive more</h5>
+<p>Do you like bite-sized learning? Sign up to be on our distribution list to get our <i>What We've Learned This Week</i> newsletter delivered to your inbox each Friday.</p>
+
+<br>
+    
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="https://turner.us7.list-manage.com/subscribe/post?u=4914dfde67afeaae5fd253e93&amp;id=c5c3a326ab" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+<div id="mc_embed_signup_scroll">
+	
+<div class="mc-field-group" style="margin-bottom: 10px;">
+	<label for="mce-EMAIL" style="font-family: TurnerBold; font-size: 14px;">Email Address: </label><br>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="font-family: TurnerRegular; font-size: 14px; width: 75%;" placeholder="Turner email">
+</div>
+<div class="mc-field-group" style="margin-bottom: 10px;">
+	<label for="mce-FNAME" style="font-family: TurnerBold; font-size: 14px;">First Name: </label><br>
+	<input type="text" value="" name="FNAME" class="required" id="mce-FNAME" style="font-family: TurnerRegular; font-size: 14px; width: 75%;" placeholder="First Name">
+</div>
+<div class="mc-field-group" style="margin-bottom: 10px;">
+	<label for="mce-LNAME" style="font-family: TurnerBold; font-size: 14px;">Last Name: </label><br>
+	<input type="text" value="" name="LNAME" class="required" id="mce-LNAME" style="font-family: TurnerRegular; font-size: 14px; width: 75%;" placeholder="Last Name">
+</div>
+<div class="mc-field-group" style="margin-bottom: 10px;">
+    <label for="mce-LOCATION" style="font-family: TurnerBold; font-size: 14px;">Location </label><br>
+    <select name="LOCATION" id="mce-LOCATION">
+    <option value=""></option>
+    <option value="Atlanta (Any Campus)">Atlanta (Any Campus)</option>
+    <option value="D.C.">D.C.</option>
+    <option value="Los Angeles Area: Cartoon Network - Burbank">Los Angeles Area: Cartoon Network - Burbank</option>
+    <option value="Los Angeles Area: CNN - Hollywood">Los Angeles Area: CNN - Hollywood</option>
+    <option value="Los Angeles Area: TBS/TNT - Burbank">Los Angeles Area: TBS/TNT - Burbank</option>
+    <option value="Los Angeles Area: Ad Sales - Century City">Los Angeles Area: Ad Sales - Century City</option>
+    <option value="Los Angeles Area: Superdeluxe">Los Angeles Area: Superdeluxe</option>
+    <option value="New York (Any Campus)">New York (Any Campus)</option>
+    <option value="San Francisco">San Francisco</option>
+    <option value="Other in the U.S.">Other in the U.S.</option>
+    <option value="Outside the U.S.">Outside the U.S.</option>
+
+	</select>
+</div>
+        
+<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+</div>    
+    
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4914dfde67afeaae5fd253e93_c5c3a326ab" tabindex="-1" value="">
+</div>
+    
+<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="margin-left: 0;">
+</div>
+    
+</div>
+</form>
+</div>
+
+<script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+
+<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='HR';ftypes[4]='dropdown';fnames[6]='LOCATION';ftypes[6]='dropdown';fnames[7]='STARTDATE';ftypes[7]='date';fnames[3]='DIVISION';ftypes[3]='text';fnames[5]='MGRLEVEL';ftypes[5]='dropdown';fnames[8]='PEOPLELEAD';ftypes[8]='dropdown';fnames[10]='COUNTRY';ftypes[10]='text';fnames[11]='REGION';ftypes[11]='dropdown';fnames[12]='CITY';ftypes[12]='text';fnames[13]='STATE';ftypes[13]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+
+<!--End mc_embed_signup-->
+    
+<div class="small-gap">&nbsp;</div>
