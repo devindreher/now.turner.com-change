@@ -114,6 +114,87 @@
         font-family: TurnerBold;
     }
     
+/*Tables*/
+    
+    table {
+        width: 100%;
+        border-collapse: collapse !important;
+    }
+    
+    tr:nth-of-type(odd) {
+        background: #eee;
+    }
+    
+    th {
+        background: #333;
+        color: white;
+        font-family: TurnerBold;
+    }
+    
+    td {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerRegular !important;
+        color: black !important;
+        font-size: 14px !important;
+        vertical-align: text-top;
+    }
+    
+    th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: TurnerBold !important;
+        color: white !important;
+        font-size: 14px !important;
+    }
+    
+    @media only screen and (max-width: 760px), (min-device-width: 763px) and (max-device-width: 1024px) {
+        
+        .change-table table, .react-table table, thead, tbody, th, td, tr {
+            display: block;
+            font-family: TurnerRegular !important;
+            color: black !important;
+        }
+        
+        .change-table thead tr, .react-table thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        .change-table tr, .react-table tr {
+            border: 1px solid #ccc;
+        }
+        
+        .change-table td, .react-table td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+        
+        .change-table td:before, .react-table td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            
+        }
+        
+        .change-table td:nth-of-type(1):before { content: "What:"; font-weight: bold; }
+        .change-table td:nth-of-type(2):before { content: "You:"; font-weight: bold; }
+        .change-table td:nth-of-type(3):before { content: "Team Members (Identify):"; font-weight: bold; }
+        
+        .react-table td:nth-of-type(1):before { content: "Response Type:"; font-weight: bold; }
+        .react-table td:nth-of-type(2):before { content: "Their Reactions to Change:"; font-weight: bold; }
+        .react-table td:nth-of-type(3):before { content: "How to Leverage Them:"; font-weight: bold; }
+        
+    }
+    
 /*Navigation Bar*/
     
     .nav-bar-in ul li:before {
@@ -196,23 +277,67 @@
 </div>
 
 <div class="main-idea">
-    <h3>Change vs. Transition</h3>
-    <p>A <i>transition</i> is internal &mdash; it's what happens in your minds as we go through changes. Ironically, transitions begin with an <i>ending</i> (losing or letting go), then shifts into a <i>neutral zone</i> where we might feel confused or disconnected. The last stage of a transition is the <i>new beginning</i> where we take hold and grow familiar with our new realities.</p>
+    <p>Individuals react to change in different ways. Here are the most common responses and how you can leverage them.</p>
 </div>
-<br>
-<div class="hero">
-    <img src="https://s3.amazonaws.com/tpd-images/Stages-of-Transition.png">
-</div>
-<h3>Signs of a Transition</h3>
-<br>
-<p>You'll often see an increase in these 5 signs during the <i>ending</i> or <i>neutral zones</i>.</p>
-<ol class="change">
-    <li><h4>Guilt.</h4><p>Change creates winners and losers. Winners can feel guilty for benefitting from a change.</p></li>
-    <li><h4>Resentment.</h4><p>Starting and recycling malicious behaviors, passive-aggressive behaviors, or sabotage.</p></li>
-    <li><h4>Anxiety.</h4><p>People get anxious. That anxiety can linger until post-change. They may grow edgy and may overreact to events or occurrences.</p></li>
-    <li><h4>Self-Absorption.</h4><p>Transitions turn a person's focus back on his/herself and undermines the teamwork. Office doors get closed and people start working on their resumes.</p></li>
-    <li><h4>Stress.</h4><p>Teams may experience increased absenteeism, worker compensation claims, and use of employee assistance programs.</p></li>
-</ol>
+
+<p>&nbsp;</p>
+
+<table class="react-table">
+    <thead>
+        <tr>
+            <th><b>Response Type</b></th>
+            <th><b>Their Reaction to Change</b></th>
+            <th><b>How to Leverage Them</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><b>Enthusiastic</b></td>
+            <td>
+                Is eager to explore new ideas and ways of working. Creatively seeks ways to make the change work.
+            </td>
+            <td>
+                Tap into their enthusiasm and leverage their championship.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Pragmatic</b>
+            </td>
+            <td>
+                Is matter-of-fact and voices healthy questions and caution about the change.<br><br>
+                Relies on information, experience, and endorsement from people with an enthusiastic response to understand and fully support the change.
+            </td>
+            <td>
+                Listen and engage them with enthusiasts; involve them.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Skeptical</b>
+            </td>
+            <td>
+                Prefers to wait for the mainstream to buy in and to see some success before they personally try the change.<br><br>
+                May be passive or grudging in acceptance with a stubborn willigness to support the change, to cooperate, and to be aligned.
+            </td>
+            <td>
+                Provide information, include them in planning, and set expectations.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Tradition-Loving</b>
+            </td>
+            <td>
+                Sees change as very risky for them and the organization.<br><br>
+                Seeks stability and a return to the way things were in the past.
+            </td>
+            <td>
+                Explore concerns, provide feedback, and minimize involvement in planning.
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 <div class="small-gap">&nbsp;</div>
 
@@ -311,32 +436,95 @@
 </div>
 <br>
 <div class="separation-2">
-    <h4>Identifying resistance</h4>
+    <h4>Motivating Your Team</h4>
 </div>
-    <ul class="change">
-        <li><b>Engage in two-way communications with the employees impacted by the change.</b> This can include Q&amp;A sessions, interviews, brainstorming sessions, group meetings, and one-on-one encounters to identify sensitivities and resistance.</li>
-        <li><b>Interview managers responsible for past changes.</b> Collect data to assist in determining the groups and locations where resistance has been historically evident.</li>
-        <li><b>Gauge reactions, watch body language, and pay attention to casual remarks.</b> Resistance may exist in a subtle, but consequential way.</li>
-        <li><b>Set deliverables and monitor their progress.</b> Missed deadlines, missed meetings, absenteeism, illness, lack of cooperation, indifference, and poor performance may be symptoms of resistance.</li>
-    </ul>
+
+<p>In most change situations, we typically focus on strategy, structure, culture, or systems. This leads us to miss something critical: for anything to change <i>people</i> have to start behaving differently &mdash; all changes are behavior changes at the core. These behavior changes happen in highly successful situations mostly by speaking to people's feelings. We need to find ways to motivate others to see the problems or solutions in ways that influence emotions, not just thought.</p>
+
+<p><b>Here are 9 ways to motivate others to change:</b></p>
+
+<ul class="change">
+    <li>Recognition</li>
+    <li>Empathy</li>
+    <li>Being a part of a bigger mission</li>
+    <li>Winning</li>
+    <li>Autonomy &amp; trust</li>
+    <li>Competition with industry peers</li>
+    <li>Inspiration</li>
+    <li>Discontentment</li>
+    <li>Instrinsic</li>
+</ul>
+
+<p>If you need clarification around any of these, feel free to <a href="mailto:learn@turner.com">reach out to Turner People Development.</a> They can help further define what motivates your team.</p>
 
 <div class="small-gap">&nbsp;</div>
 
 <a name="coaching"></a>
 <div class="separation-2">
-    <h4>Coaching Through Change</h4>
+    <h4>Assessing Personal Impacts On Your Team</h4>
 </div>
 
 <div class="main-idea">
-    <p>If you have someone who's struggling with the change, reflect on what you've noticed then answer the questions below:</p>
+    <p><b>Why do we care about the personal impact on our team?</b></p>
+    <p>A person's reaction to change is very personal. Every transition begins with an ending &mdash; a loss &mdash; even when the change is positive.</p>
+    <p>We must first acknowledge the loss, whether it's real or perceived, permanent or temporary, tangible or intangible. The loss can affect the depth of the transition and the time it takes to get to the new beginning.</p>
+    <p>Also, don't forget about yourself! Acknowledge your loss, too, so you can effectively begin to transition.</p>
 </div>
-<br>
-<ol class="change">
-    <li>What behaviors is the person demonstrating right now? Specifically, what is this individual saying and doing related to the changes?</li>
-    <li>Based on these behaviors, what do you believe may be the underlying cause of their fear or resistance?</li>
-    <li>What stage of the transition (i.e., ending, neutral, new beginning) do you think this person may be in? What signs of transition do you see?</li>
-    <li>What actions would be appropriate for you to take in order to help this person accept and participate in the change?</li>
-</ol>
+
+<p>&nbsp;</p>
+
+<p>First, identify what your loss is and then ask your team members. Try to view the impact from their perspective. Ask yourself: <i>who stands to lose something related to this change</i> and <i>what do they stand to lose?</i></p>
+
+<p>&nbsp;</p>
+
+<table class="change-table">
+    <thead>
+        <tr>
+            <th><b>What</b></th>
+            <th><b>You</b></th>
+            <th><b>Team Members</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Turf</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Title/Status</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Power/Influence</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Sense of Failure</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Personal Identity</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Competence</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Other</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>&nbsp;</p>
 
 <hr>
 
