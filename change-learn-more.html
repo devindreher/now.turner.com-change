@@ -1,0 +1,743 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        .big-spacer {
+            margin: 75px 0px;
+        }
+
+        .med-spacer {
+            margin: 40px 0px;
+        }
+
+        .accent-bar-left {
+            border-top: 5px solid #000;
+            width: 30%;
+            float: left;
+        }
+
+        .accent-bar-right {
+            border-top: 5px solid #000;
+            width: 30%;
+            float: right;
+        }
+
+        .definition {
+            font: 24px TurnerLight;
+            padding: 30px;
+        }
+
+        .hero {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .hero img {
+            width: 100%;
+        }
+
+        .footnote {
+            font-size: 9px !important;
+        }
+
+        .people-leader-container {
+            width: 100%;
+            border: 2px dotted #dedede;
+            padding: 20px;
+        }
+
+        hr.change {
+            border-top: 3px double #8c8b8b;
+        }
+
+        .three-col {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            border-right: 1px solid #777;
+        }
+
+        .three-col:last-of-type {
+            border-right: none;
+        }
+
+        .three-col p {
+            line-height: 130%;
+        }
+
+        .three-col p strong {
+            font-size: 14px;
+        }
+
+        .three-col ul {
+            padding-left: 15px;
+        }
+
+        .three-col ul li {
+            font-size: 14px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .three-col-row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media only screen and (max-width: 850px) {
+            .three-col {
+                width: 100%;
+                border-right: none;
+            }
+        }
+
+        /*RESOURCE CARDS*/
+
+        .resource-cards {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0;
+
+            display: grid;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-gap: 20px;
+
+        }
+
+        @media only screen and (min-width: 850px) {
+            .resource-cards {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .card,
+        .card-button {
+            background: white;
+            text-decoration: none;
+            color: #444;
+            border: 1px solid dimgrey;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            position: relative;
+            top: 0;
+            transition: all .1s ease-in;
+        }
+
+        .card:hover,
+        .card-button:hover {
+            top: -2px;
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .card .thumbnail,
+        .card-button .thumbnail {
+            margin: 5% 1% 0 5%;
+        }
+
+        .card article,
+        .card-button article {
+            padding: 20px;
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h1,
+        .card-button h1 {
+            font-size: 20px;
+            font-family: TurnerBold, Arial, Helvetica, sans-serif;
+            margin: 0;
+            color: #333;
+            line-height: 120%;
+        }
+
+        .card p,
+        .card-button p {
+            line-height: 1.4;
+            flex: 1;
+            font-size: 1rem;
+        }
+
+        .card span,
+        .card-button span {
+            font-size: 12px;
+            font-weight: bold;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin: 2em 0 0 0;
+            line-height: 135%;
+        }
+
+        /*CLASS SECTION*/
+
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #444444;
+            margin: 0 auto;
+        }
+
+        .class-wrapper {
+            width: 100%;
+            padding: 20px;
+            background-color: #dedede;
+        }
+
+        ul.descr li:before {
+            background-image: none !important;
+        }
+
+        ul.descr li {
+            margin-bottom: 10px;
+            list-style-type: disc;
+            font-size: 14px;
+        }
+
+        .class-btn {
+            border: 2px solid #0052e7;
+            padding: 5px;
+            margin: 10px 10px 10px 0;
+            background-color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 2px 2px 3px #dedede;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .class-btn:hover {
+            background-color: #0052e7;
+            color: #fff !important;
+        }
+
+        /*NAVIGATION*/
+
+        ul.page-nav li:before {
+            background-image: none !important;
+        }
+
+        ul.page-nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #dedede;
+            top: 0;
+            position: sticky;
+            position: -webkit-sticky;
+        }
+
+        ul.page-nav li {
+            float: left;
+            margin-bottom: 0;
+        }
+
+        ul.page-nav li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 10px;
+            text-decoration: none;
+            transition: .3s ease;
+
+            font: 14px TurnerBold !important;
+        }
+
+        ul.page-nav li a:hover {
+            background: #0052e7;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 850px) {
+            ul.page-nav li {
+                float: none;
+            }
+
+            ul.page-nav li a {
+                text-align: left;
+            }
+        }
+
+
+        .nav-bar-in ul li:before {
+            background-image: none;
+        }
+
+        .nav-bar-in ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .nav-bar-in li {
+            float: left;
+            margin-bottom: 0;
+        }
+
+        .nav-bar-in li a {
+            display: block;
+            color: #fff;
+            font-family: TurnerBold;
+            font-size: 14px;
+            text-align: center;
+            padding: 14px 10px;
+            text-decoration: none;
+        }
+
+        .nav-bar-in li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .nav-bar-in .active {
+            background-color: #0052e7;
+            cursor: default;
+        }
+
+        /*MODALS */
+
+        /* The Modal (background) */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 888;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Modal Content */
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10vh auto;
+            padding: 20px;
+            border: 2px solid #888;
+            width: 95%;
+        }
+
+        .modal-content h2 {
+            font-family: TurnerBold;
+            font-size: 2rem;
+            line-height: 125%;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .modal-content .subtitle {
+            font-family: TurnerRegular;
+            font-weight: bold;
+            line-height: 125%;
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .modal-content {
+                width: 50%;
+            }
+        }
+
+        /* The Close Button */
+
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<div class="nav-bar-in">
+    <ul>
+        <li><a href="https://now.turner.com/change" class="active">Home</a></li>
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+    </ul>
+</div>
+<ul class="page-nav">
+    <li><a href="#phases-and-reactions">Phases &amp; Reactions</a></li>
+    <li><a href="#manage-energy">Manage Energy</a></li>
+    <li><a href="#build-resiliency">Build Resiliency</a></li>
+    <li><a href="#classes">Take a Class</a></li>
+</ul>
+
+<br />
+<br />
+
+<h2>Learn More</h2>
+<br />
+
+<a name="phases-and-reactions"></a>
+<h3>Phases &amp; Reactions to Change</h3>
+
+<p>For most people, change can be unsettling &mdash; even if it's positive change. It can help to understand the different phases of change and what feelings are common during each phase. Being able to name what you're going through and how you feel is the first step to creating your new reality.</p>
+
+<div class="accent-bar-left">&nbsp;</div>
+<div class="definition"><span style="font-weight: bold;">Change</span> is an event that is situational and external to us. Something stops and something new begins. It's typically an outcome or results-focused and has a stop/start quality. For example, having a baby, getting a new job, or the launch of a project.
+    <br><br> A <span style="font-weight: bold;">transition</span> is our internal psychological reorientation to change. It's how we come to terms with the new reality and adapt to the new situation. Until we successfully transition from an old way to a new way, the overall change won't be successful. We go through transitions <span style="font-weight: bold;">at our own pace.</span>
+
+</div>
+<div class="accent-bar-right">&nbsp;</div>
+<div style="clear: both;">&nbsp;</div>
+
+<p>We transition through change in three basic phases: <strong>the ending, the neutral zone, and a new beginning.</strong></p>
+
+<p>During the <strong>the ending</strong>, we let go of our old ways of doing things.</p>
+
+<p>The <strong>neutral zone</strong> is the heart of the transition process. You aren't doing what you used to do, but you may not be doing things in a new way, yet. For some, this is a time of confusion while for others it's a time of curiosity and receptiveness.</p>
+
+<p>The <strong>new beginning</strong> is when we begin to feel "ourselves" again. We start to understand the new reality and identify with the situation.</p>
+
+<div class="hero"><img src="https://s3.amazonaws.com/tpd-images/Change-Map.png" />
+    <p class="footnote">Adapted from William Bridges and Linkage, 1998 &amp; 2005.</p>
+</div>
+
+<p>As we transition through each phase, we experience different emotions and reactions. These are neither "good" or "bad." The curve below outlines the emotional responses you may have as you go through your change journey. Our transition begins when we identify our thoughts and feelings. We progress by taking positive actions to address those thoughts and feelings.</p>
+
+<div class="hero"><img src="https://s3.amazonaws.com/tpd-images/change-positive.png" />
+    <p class="footnote">Adapted from Don Kelley and Darryl Conner <em>Emotional Change Cycle</em>.</p>
+</div>
+
+<div class="people-leader-container">
+    <h5>Help for People Leaders</h5>
+    <p>Imagine a person riding an elephant. The rider is able to see the path ahead and make adjustments accordingly. The elephant is powerful and driven by emotion and instinct &mdash; if it doesn't want to move forward, there are few things the rider can do to force it to continue the journey.</p>
+
+    <p>The rider in the above scenario represents the logical part of our brain while the elephant is the emotional part. The latter is bigger and can overpower our logic. As a leader, you can "hack" the brain of your team by <strong>directing the rider</strong> (clarifying), <strong>motivating</strong> (uncovering the needs/desires of the team), and <strong>shaping the path</strong> (eliminating as many barriers as possible).</p>
+
+    <div class="hero">
+
+        <iframe id="ytplayer" width="720" height="405" src="https://www.youtube.com/embed/X9KP8uiGZTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <p>In this animated video we look at the behavior change process using Jonathan Haidt's analogy of an elephant, a rider, and a path.</p>
+
+        <div class="three-col-row">
+            <div class="three-col">
+                <p><strong>Directing the Rider</strong></p>
+                <ul>
+                    <li>Find the bright spots</li>
+                    <li>Script the critical moves</li>
+                    <li>Point to the destination</li>
+                </ul>
+            </div>
+            <div class="three-col">
+                <p><strong>Motivating the Elephant</strong></p>
+                <ul>
+                    <li>Find the feeling</li>
+                    <li>Shrink the change</li>
+                    <li>Grow your people</li>
+                </ul>
+            </div>
+            <div class="three-col">
+                <p><strong>Shaping the Path</strong></p>
+                <ul>
+                    <li>Tweak the environment</li>
+                    <li>Build habits</li>
+                    <li>Rally the heard</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="big-spacer">&nbsp;</div>
+
+<hr class="change">
+
+<div class="med-spacer">&nbsp;</div>
+
+<a name="manage-energy"></a>
+<h3>Manage Energy</h3>
+
+<p>Organizational expert Dan Heath says change is hard not because people are lazy, but exhausted. Maintaining energy is essential to navigating change successfully. Discover tactics and resources for managing your energy through change here.</p>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Energy/Change-in-Your-World.pptx" target="_blank" class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Change In Your World</h1>
+            </div>
+            <article>
+                <p>This individual exercise helps you begin to gain control and understanding so you can consciously and intentionally manage your change.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Energy/Reactions-to-Change-Excercise.pptx" target="_blank" class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Reactions to Change</h1>
+            </div>
+            <article>
+                <p>A simple exercise to maintain energy through change.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="https://now.turner.com/livewell" target="_blank" class="card">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>LiveWell</h1>
+            </div>
+            <article>
+                <p>Turner resources to help manage energy.</p>
+            </article>
+        </a>
+    </div>
+</div>
+
+<div class="big-spacer">&nbsp;</div>
+
+<hr class="change">
+
+<div class="med-spacer">&nbsp;</div>
+
+<a name="build-resiliency"></a>
+<h3>Build Resiliency</h3>
+
+<p>Resilience is not something you are born with or without. It's a set of behaviors, thoughts, and actions that can be learned and developed. Being resilient doesn't mean you don't experience challenges or setbacks, but rather you simply "bounce back" and achieve despite challenges and setbacks.</p>
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Resiliency/Resiliency-Workout.pptx" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Resiliency Workout</h1>
+            </div>
+            <article>
+                <p>&nbsp;</p>
+            </article>
+        </a>
+    </div>
+</div>
+
+<div class="big-spacer">&nbsp;</div>
+
+<hr class="change">
+
+<div class="med-spacer">&nbsp;</div>
+
+<a name="classes"></a>
+<h3>Take a Class</h3>
+
+<p>We have a number of classes and workshops to help you build your change agility. Select one below to get more information and to request a session.</p>
+
+<div class="class-wrapper">
+    <h5>Change Foundations: Start Here</h5>
+    <div class="resource-cards">
+        <div class="resource">
+            <div class="card-button" data-modal="#modal1">
+                <div class="thumbnail">
+                    <h1>Rock the Change</h1>
+                </div>
+                <article>
+                    <p>Explore how to ensure balance and focus during periods of change, learn to influence up, and how to provide support to your team. Offered as part of our LeadershipNow series.</p>
+                </article>
+            </div>
+        </div>
+        <div class="resource">
+            <div class="card-button" data-modal="#modal2">
+                <div class="thumbnail">
+                    <h1>Individual Transitions</h1>
+                </div>
+                <article>
+                    <p>Learn how to manage your individual journey through both work and life changes with less disruption and more success.</p>
+                </article>
+            </div>
+        </div>
+        <div class="resource">
+            <div class="card-button" data-modal="#modal3">
+                <div class="thumbnail">
+                    <h1>Leading Organizational Transitions</h1>
+                </div>
+                <article>
+                    <p>This interactive session will build your confidence and competence in leading change. You will learn practical skills and tools to use when leading your team through any organizational change &mdash; big or small.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="arrow-down"></div>
+<div class="class-wrapper">
+    <h5>Change Reinforcements</h5>
+    <div class="resource-cards">
+        <div class="resource">
+            <div class="card-button" data-modal="#modal4">
+                <div class="thumbnail">
+                    <h1>Coaching Your Kickass Team</h1>
+                </div>
+                <article>
+                    <p>Get the essentials required to be an effective coach to ensure your team runs in tip-top shape. Offered as part of our LeadershipNow series.</p>
+                </article>
+            </div>
+        </div>
+        <div class="resource">
+            <div class="card-button" data-modal="#modal5">
+                <div class="thumbnail">
+                    <h1>How to Talk "Good" to Your Team</h1>
+                </div>
+                <article>
+                    <p>Create an environment for open communications. Offered as part of our LeadershipNow series.</p>
+                </article>
+            </div>
+        </div>
+        <div class="resource">
+            <div class="card-button" data-modal="#modal6">
+                <div class="thumbnail">
+                    <h1>Stop, Collaborate, and Listen</h1>
+                </div>
+                <article>
+                    <p>Learn how to determine the best strategy and skills for nurturing collaborative work with individuals and teams. Offered as part of our LeadershipNow series.</p>
+                </article>
+            </div>
+        </div>
+        <div class="resource">
+            <div class="card-button" data-modal="#modal7">
+                <div class="thumbnail">
+                    <h1>Corporate Athlete&reg; (U.S.)</h1>
+                </div>
+                <article>
+                    <p>Train like an athlete and learn to engage your spirit, mind, heart, and body to complete the important missions you take on every day. Offered as part of our LiveWell program.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL CONTENT -->
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <a class="close">&times;</a>
+        <h2>Rock The Change</h2>
+        <br>
+        <p>In this session you will:</p>
+        <ul class="descr">
+            <li>Understand the implications of change initiatives on people and your role in guiding employees through transitions.</li>
+            <li>Identify what's in/out of control in change and how to influence up to support it.</li>
+            <li>Apply change leadership tools and concepts in our environment.</li>
+        </ul>
+        <br>
+        <a class="class-btn" href="mailto:lindsey.fenton@turner.com?subject=Requesting Rock the Change">Request a Session</a>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <a class="close">&times;</a>
+        <h2>Individual Transitions</h2>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <a class="close">&times;</a>
+        <h2>Leading Organizational Transitions</h2>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <a class="close">&times;</a>
+        <h2>Coaching Your Kickass Team</h2>
+        <br>
+        <p>In this session you will:</p>
+        <ul class="descr">
+            <li>Identify coaching needs for your team and guide them to higher levels of effectiveness by actively engaging in dialog.</li>
+            <li>Learn how to hold a coaching conversation and provide feedback, insights, and guidance while encouraging ownership in the solution and action plan.</li>
+            <li>Apply coaching skills through role-playing actual Turner scenarios.</li>
+        </ul>
+        <br>
+        <a class="class-btn" href="mailto:lindsey.fenton@turner.com?subject=Requesting Coaching Your Kickass Team">Request a Session</a>
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <a class="close">&times;</a>
+        <h2>How to Talk "Good" to Your Team</h2>
+        <br>
+        <p>In this session you will:</p>
+        <ul class="descr">
+            <li>Explore communication styles and preferences and how to apply them to your team and leader communication.</li>
+            <li>Learn strategies for communicating with your team and your leadership.</li>
+            <li>Create your own personal leadership communication plan.</li>
+        </ul>
+        <br>
+        <a class="class-btn" href="mailto:lindsey.fenton@turner.com?subject=Requesting How to Talk Good to Your Team">Request a Session</a>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <a class="close">&times;</a>
+        <h2>Stop, Collaborate, and Listen</h2>
+        <br>
+        <p>In this session you will:</p>
+        <ul class="descr">
+            <li>Define and clarify the term "collaboration."</li>
+            <li>Identify the most effective strategies for working in a collaborative manner &mdash; with both individuals and teams.</li>
+            <li>Learn and practice skills and tools that will help you prioritize and enhance your collaborative relationships.</li>
+        </ul>
+        <br>
+        <a class="class-btn" href="mailto:lindsey.fenton@turner.com?subject=Requesting Stop, Collaborate, and Listen">Request a Session</a>
+    </div>
+</div>
+
+<div id="modal7" class="modal">
+    <div class="modal-content">
+        <a class="close">&times;</a>
+        <h2>Corporate Athlete&reg; (U.S.)</h2>
+        <br>
+        <p>The Corporate Athlete&reg; program was created by the Johnson &amp; Johnson Human Performance Institute, a pioneer in delivering a science-based energy management training solution.</p>
+        <p>This course will give you new tools to understand the choices and changes you can make to have the most positive impact on your life.</p>
+        <a class="class-btn" href="https://now.turner.com/livewell" target="_blank">Visit the LiveWell Page for Availability</a>
+    </div>
+</div>
+
+<div class="med-spacer">&nbsp;</div>
+
+<!--MODAL FUNCTIONS-->
+
+<script>
+    $(".card-button").on("click", function() {
+        var modal = $(this).data("modal");
+        $(modal).show();
+    });
+
+    $(".modal").on("click", function(e) {
+        var className = e.target.className;
+        if (className === "modal" || className === "close") {
+            $(this).closest(".modal").hide();
+        }
+    });
+
+</script>

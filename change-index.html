@@ -1,0 +1,273 @@
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+    <!--SMOOTH AND SNAP SCROLLING-->
+
+    <script>
+        $(document).ready(function() {
+            $("a").on("click", function(event) {
+                var hash = $(this).data("hash");
+                if (hash) {
+                    $("html, body").animate({
+                        scrollTop: $(document.getElementById(hash)).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<style>
+    .hero-text {
+        padding: 30px;
+        font-size: 22px;
+        font-family: TurnerLight;
+        line-height: 150%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .lg-button {
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .lg-button a {
+        border: 2px solid #0052e7;
+        padding: 10px;
+        min-width: 45%;
+        font-size: 24px;
+        font-family: TurnerBold;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        box-shadow: 2px 2px 3px #cecece;
+    }
+
+    .lg-button a:hover {
+        background: #0052e7;
+        color: #fff;
+        transition: .2s ease all;
+    }
+
+    /*
+    .lg-button {
+        border: 2px solid #0052e7;
+        margin: 0 auto;
+        padding: 10px;
+        width: 25%;
+        display: block;
+        font-size: 24px;
+        font-family: TurnerBold;
+        text-align: center;
+        box-shadow: 2px 2px 3px #cecece;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .lg-button:hover {
+        background: #0052e7;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s ease all;
+    }
+*/
+
+    .sm-button {
+        border: 2px solid #0052e7;
+        padding: 0;
+        width: 25%;
+        display: block;
+        font-size: 12px !important;
+        font-family: TurnerBold;
+        text-align: center;
+        box-shadow: 2px 2px 3px #cecece;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .sm-button:hover {
+        background: #0052e7;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s ease all;
+    }
+
+    .big-spacer {
+        margin: 75px 0px;
+    }
+
+    .med-spacer {
+        margin: 40px 0px;
+    }
+
+    .center-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .column-container {
+        box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        padding-right: 20px;
+    }
+
+    .column-container:nth-child(2) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+        .column {
+            width: 100%;
+        }
+    }
+
+    .column-container:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+    /*NAVIGATION*/
+
+    .nav-bar-in ul li:before {
+        background-image: none;
+    }
+
+    .nav-bar-in ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .nav-bar-in li {
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .nav-bar-in li a {
+        display: block;
+        color: #fff;
+        font-family: TurnerBold;
+        font-size: 14px;
+        text-align: center;
+        padding: 14px 10px;
+        text-decoration: none;
+    }
+
+    .nav-bar-in li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    .nav-bar-in .active {
+        background-color: #0052e7;
+        cursor: default;
+    }
+
+</style>
+
+<body>
+
+    <div class="nav-bar-in">
+        <ul>
+            <li><a href="https://now.turner.com/change" class="active">Home</a></li>
+            <li><a href="">Start Here</a></li>
+            <li><a href="#reactions">Reactions to Change</a></li>
+        </ul>
+    </div>
+
+    <img src="https://s3.amazonaws.com/tpd-files/images/1920x1080_RockTheChangev4.png">
+
+    <br>
+    <br>
+
+    <!--<a class="lg-button" href="/change-transition-readiness-assessment">Start Here</a>-->
+    <div class="lg-button">
+        <a href="/change-transition-readiness-assessment">Start Here</a>
+    </div>
+    <br>
+    <div class="center-text">
+        <h3>Or find out more about change below.<br>
+            <i class="far fa-arrow-alt-circle-down"></i>
+        </h3>
+    </div>
+
+    <div class="big-spacer">&nbsp;</div>
+
+    <a name="reactions"></a>
+
+    <h2>Our reactions to change</h2>
+    <p>In today's world, change in ubiquitous. We work in a rapidly evolving marketplace that requires every aspect of our business to adapt, innovate, and change.</p>
+
+    <div class="med-spacer">&nbsp;</div>
+
+    <div style="width: 45%; border-top: 5px solid #000; float: left;">&nbsp;</div>
+    <div class="hero-text">While we can't control the circumstances, we can check our thoughts and attitudes and use tools to help reframe our perspectives on how to move forward.</div>
+    <div style="width: 45%; border-top: 5px solid #000; float: right;">&nbsp;</div>
+
+    <div style="clear:both;">&nbsp;</div>
+
+    <div class="med-spacer">&nbsp;</div>
+
+    <p>The tools and resources here are designed to help you feel more in control and assist in your understanding about change. Not all tools apply to everyone or all changes because everyone is different and experiences changes differently. Your journey through change begins with where you are today &mdash; not where you wish you were, where someone thinks you should be, or where you think you'll end up. </p>
+
+    <div class="med-spacer">&nbsp;</div>
+
+    <div style="width: 45%; border-top: 5px solid #000; float: left;">&nbsp;</div>
+    <div class="hero-text">Until you know where you are now, you won't be able to get to where you want to be.</div>
+    <div style="width: 45%; border-top: 5px solid #000; float: right;">&nbsp;</div>
+
+    <div style="clear:both;">&nbsp;</div>
+
+    <div class="med-spacer">&nbsp;</div>
+
+    <p>We recommend starting with our <a href="/change-transition-readiness-assessment">self-assessment</a> that will help you identify your current "location" in change &mdash; what we call the <em>ending, neutral zone,</em> or a <em>new beginning.</em> However, if you prefer to jump right in, select a starting point below.</p>
+
+    <div class="med-spacer">&nbsp;</div>
+    
+    
+
+    <h3>Endings</h3>
+    <p>Every change begins with saying goodbye. During this time, we often feel loss and begin to "let go" of the way things were. To help yourself or your team through this period, use the tools within. Remember &mdash; it's hard to start the "new" before you let go of the old.</p>
+    
+    <a class="sm-button" href="/change/ending">Learn More</a>
+
+    <div class="med-spacer">&nbsp;</div>
+    
+    <h3>The Neutral Zone</h3>
+    <p>The heart of change is often the hardest. You aren't doing what you used to, but you aren't doing what you will be in the future. People often feel confused and frustrated during this time and wonder, "Where am I?" Others may feel a surge of creativity and possibilities to shape the "new."</p>
+    
+    <p>The tools in this section will help you gain understanding, build agility, and encourage innovation during this phase of change.</p>
+    
+    <a class="sm-button" href="/change/neutral">Learn More</a>
+    
+    <div class="med-spacer">&nbsp;</div>
+    
+    <h3>New Beginnings</h3>
+    <p>If you're starting to feel like your old self again &mdash; energized, excited about the work you're doing, etc. &mdash; you're likely in this state. Use the tools in this section to keep up the momentum.</p>
+    
+    <a class="sm-button" href="/change/ready">Learn More</a>
+    
+    <div class="med-spacer">&nbsp;</div>

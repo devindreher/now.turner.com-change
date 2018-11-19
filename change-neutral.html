@@ -1,0 +1,218 @@
+<style>
+    
+    img {
+        width: auto;
+        height: auto;
+    }
+    
+    .big-spacer {
+        margin: 75px 0px;
+    }
+
+    .med-spacer {
+        margin: 40px 0px;
+    }
+
+    /*RESOURCE CARDS*/
+
+    .resource-cards {
+        width: 100%;
+        max-width: 1240px;
+        margin: 0;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+
+    }
+
+    @media only screen and (min-width: 850px) {
+        .resource-cards {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        border: 1px solid dimgrey;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
+    }
+
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2)
+    }
+
+    .card .thumbnail {
+        margin: 5% 1% 0 5%;
+    }
+
+    .card article {
+        padding: 20px;
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card h1 {
+        font-size: 20px;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        margin: 0;
+        color: #333;
+        line-height: 120%;
+    }
+
+    .card p {
+        line-height: 1.4;
+        flex: 1;
+        font-size: 1rem;
+    }
+
+    .card span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin: 2em 0 0 0;
+        line-height: 135%;
+    }
+
+    /*NAVIGATION*/
+
+    .nav-bar-in ul li:before {
+        background-image: none;
+    }
+
+    .nav-bar-in ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .nav-bar-in li {
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .nav-bar-in li a {
+        display: block;
+        color: #fff;
+        font-family: TurnerBold;
+        font-size: 14px;
+        text-align: center;
+        padding: 14px 10px;
+        text-decoration: none;
+    }
+
+    .nav-bar-in li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    .nav-bar-in .active {
+        background-color: #0052e7;
+        cursor: default;
+    }
+
+</style>
+
+<div class="nav-bar-in">
+    <ul>
+        <li><a href="https://now.turner.com/change" class="active">Home</a></li>
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+    </ul>
+</div>
+
+<br />
+<br />
+
+<h2>The Neutral Zone: <em>Where Am I?</em></h2>
+<p>The heart of change is often the hardest. You aren't doing what you used to do, but you aren't doing what you will be doing. People often feel confused and frustrated during this time wondering, "Where am I?" Others may feel a surge of creativity and possibilities to shape "the new."</p>
+<p>Below are tools that will help you gain understanding, build agility, and encourage innovation during this challenging phase of change.</p>
+
+<img src="https://s3.amazonaws.com/tpd-images/Change-Curve-Neutral.png">
+
+<br />
+<br />
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Neutral/CUSP_Worksheet.pptx" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>CUSP Worksheet</h1>
+            </div>
+            <article>
+                <p>This tool helps individuals begin to reestablish control, understanding, support, and purpose during the heart of change.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Neutral/VUCA.pptx" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Team VUCA Activity</h1>
+            </div>
+            <article>
+                <p>A simple approach to help teams or individuals navigate constant or unpredictable change.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Neutral/Force-Field-Analysis.pptx" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Force Field Team Activity</h1>
+            </div>
+            <article>
+                <p>Use this approach with your team to visualize forces in favor and against a change and create a strategy to support the change.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Neutral/Managing-Disruption.pptx" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Managing Disruption</h1>
+            </div>
+            <article>
+                <p>A guide for individuals and leaders to manage disruption and conquer challenges throughout change.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Neutral/Communicating-During-Change.pptx" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Communicating for Clarity</h1>
+            </div>
+            <article>
+                <p>This handout will help individuals ask questions that will increase their understanding and help leaders communicate effectively.</p>
+            </article>
+        </a>
+    </div>
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Neutral/Temporary-Solutions.pptx" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>Temporary Solutions Team Activity</h1>
+            </div>
+            <article>
+                <p>This tool will help you and your team begin to build a bridge between the old and the new.</p>
+            </article>
+        </a>
+    </div>
+</div>

@@ -1,116 +1,126 @@
-<style type="text/css">
-    
-    .separation-2 {
-        width: 100%;
-        height: 100px;
-        background-color: black;
-        margin-top: 20px;
-        margin-bottom: 15px;
-        display: table;
+<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" rel="stylesheet" />
+
+<style>
+    img {
+        max-width: 100%;
     }
-    
-    .separation-2 h4 {
-        color: white;
-        text-transform: uppercase;
-        text-align: center;
-        vertical-align: middle;
-        display: table-cell;
+
+    .lg-button {
+        margin: 10px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
     }
-    
-    .theme-content ul li:before {
-        background-image: none !important;
-    }
-    
-    .theme-content p, .theme-content ul li, .theme-content ol li {
-        margin-bottom: 0px;
-        font-family: "TurnerRegular";
-        font-size: 18px;
-        line-height: 1.7;
-        word-wrap: break-word;
-        color: black;
-    }
-    
-    ol.change, ol.change > li {
-        margin-bottom: 20px;
-    }
-    
-    ol.change h4 {
-        margin-bottom: 0;
-        font-family: TurnerBold;
-    }
-    
-    ul.change, ul.change > li {
-        margin-bottom: 10px;
-        list-style-type: disc;
-    }
-    
-    .warning {
-        width: 100%;
-        background-color: cornsilk;
-        color: black;
+
+    .lg-button a {
+        border: 2px solid #0052e7;
         padding: 10px;
+        min-width: 45%;
+        font-size: 24px;
+        font-family: TurnerBold;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        box-shadow: 2px 2px 3px #cecece;
     }
-    
-    .small-gap {
-        margin-top: 30px;
-        margin-bottom: 30px;
+
+    .lg-button a:hover {
+        background: #0052e7;
+        color: #fff;
+        transition: .2s ease all;
+    }
+
+    /*
+    .lg-button {
+        border: 2px solid #0052e7;
+        margin: 0 auto;
+        padding: 10px;
+        width: 25%;
+        display: block;
+        font-size: 24px;
+        font-family: TurnerBold;
+        text-align: center;
+        box-shadow: 2px 2px 3px #cecece;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .lg-button:hover {
+        background: #0052e7;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s ease all;
+    }
+*/
+
+    .sm-button {
+        border: 2px solid #0052e7;
+        margin: 0 auto;
+        padding: 0;
+        width: auto;
+        display: block;
+        font-size: 12px !important;
+        font-family: TurnerBold;
+        text-align: center;
+        box-shadow: 2px 2px 3px #cecece;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .sm-button:hover {
+        background: #0052e7;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s ease all;
+    }
+
+    .big-spacer {
+        margin: 75px 0px;
+    }
+
+    .med-spacer {
+        margin: 40px 0px;
+    }
+
+    .center-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .column-container {
+        box-sizing: border-box;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        padding-right: 20px;
+    }
+
+    .column-container:nth-child(2) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+        .column {
+            width: 100%;
+        }
+    }
+
+    .column-container:after {
+        content: "";
+        display: table;
         clear: both;
     }
-    
-    .big-gap {
-        margin-top: 125px;
-        margin-bottom: 125px;
-        clear: both;
+
+
+    /*NAVIGATION*/
+
+    .nav-bar-in ul li:before {
+        background-image: none;
     }
-    
-    .hero {
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-    
-    .hero img {
-        width: 100%;
-    }
-    
-    .main-idea {
-        background-color: whitesmoke;
-        padding: 20px;
-    }
-    
-    .main-idea p {
-        color: black !important;
-    }
-    
-    hr {
-        background-color: white;
-        height: 15px;
-        margin-top: 35px;
-        color: white;
-    }
-    
-    .small-header a {
-        font-family: TurnerBold;
-        text-transform: uppercase;
-    }
-    
-    h4 {
-        font-family: TurnerBold;
-        font-size: 18px;
-    }
-    
-    h2, h3 {
-        font-family: TurnerBold;
-    }
-    
-/*Navigation Bar*/
-    .nav-bar-in ul li:before{
-    background-image: none  !important;
-}
-.nav-bar-in li {
-    float: left;
-    margin-bottom:0px;
-}
+
     .nav-bar-in ul {
         list-style-type: none;
         margin: 0;
@@ -118,60 +128,102 @@
         overflow: hidden;
         background-color: #333;
     }
-    
+
     .nav-bar-in li {
         float: left;
-        margin: 0;
-        padding: 0;
+        margin-bottom: 0;
     }
-    
+
     .nav-bar-in li a {
         display: block;
-        color: white;
+        color: #fff;
         font-family: TurnerBold;
         font-size: 14px;
         text-align: center;
         padding: 14px 10px;
         text-decoration: none;
-    } 
-    
+    }
+
     .nav-bar-in li a:hover:not(.active) {
         background-color: #111;
     }
-    
+
     .nav-bar-in .active {
-        background-color: rgb(0,82,231);
+        background-color: #0052e7;
         cursor: default;
     }
-    
-    .nav-bar-in {
-        margin-bottom: 40px;     
-    }
+
 </style>
 <div class="nav-bar-in">
-<ul>
-	<li><a class="active" href="">Main</a></li>
-	<li><a href="/learnnow" target="_blank">learn.turner.com</a></li>
-	<li><a href="/change-individuals">Info for Individuals</a></li>
-	<li><a href="/change-leaders">Info for Leaders</a></li>
-	<li><a href="/change-resources">Resources</a></li>
-	<li><a href="/change-classes">Take a Class</a></li>
-	<li><a href="/who-is-att">Who is AT&amp;T?</a></li>
-</ul>
+    <ul>
+        <li><a class="active" href="https://now.turner.com/change">Home</a></li>
+        <li><a href="">Start Here</a></li>
+        <li><a href="">Ending Zone</a></li>
+        <li><a href="">Neutral Zone</a></li>
+        <li><a href="">New Beginnings</a></li>
+    </ul>
 </div>
 
-<p style="text-align: center"><a href="https://now.turner.com/change-spanish">Spanish</a> | <a href="https://now.turner.com/change-portuguese">Portuguese</a></p>
+<p><img alt="" src="https://s3.amazonaws.com/tpd-files/images/1920x1080_RockTheChangev4.png" /><br />
+    <br />
+    <!--<a class="lg-button" href="/change-transition-readiness-assessment">Start Here</a>--></p>
 
-<h1>The time is now.</h1>
+<div class="lg-button"><a href="/change/transition-readiness-assessment">Start Here</a></div>
 
-<p>Media companies are embracing a new reality as we charge into the future. Advancements in technology have caused consumers to have and want more ways to consume and engage with compelling content. This has a radical influence on programming, advertising and marketing, and consolidation that cannot be ignored.</p>
-<br>
-<p>These changes in our industry and our fans' viewing behaviors shape the way we think about content — how we produce, distribute, and monetize it. There are opportunities to seize admist all this change.</p>
-<br>
-<p><b>That's where you come in.</b> We need your help to create, foster, and drive Turner to be an organization that keeps us at the top.</p>
-<br>
-<p>As a leader, you deal with large and small changes in organizations and people every day. As an employee, you also deal with lots of change in your work, teams, roles, or processes. But, change is hard. Sometimes even the best of us get stuck.</p>
-<br>
-<p>These pages give you simple tools and other techniques to leverage when leading change for your teams. And, if you still need help, there are colleagues here to assist.</p>
-<br>
-<div class="small-gap">&nbsp;</div>
+<p>&nbsp;</p>
+
+<div class="center-text">
+    <h3>Or find out more about change below.</h3>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="big-spacer">&nbsp;</div>
+
+<h2>Our reactions to change</h2>
+
+<p>Lorem ipsum dolor amet single-origin coffee jean shorts church-key occupy, chia woke narwhal hoodie. Austin hashtag schlitz vaporware chartreuse raclette, tattooed air plant. Flexitarian copper mug slow-carb, jean shorts 8-bit ramps yuccie bespoke. Semiotics four loko fam ethical schlitz vinyl. PBR&amp;B copper mug tbh adaptogen vegan. Sartorial seitan palo santo, waistcoat beard neutra meditation venmo vexillologist small batch gastropub cloud bread sustainable asymmetrical DIY. Tousled mustache leggings, tofu single-origin coffee scenester stumptown man braid pickled vexillologist helvetica try-hard cardigan retro pug.</p>
+
+<div class="med-spacer">&nbsp;</div>
+
+<div class="column-container">
+    <div class="column">
+        <h3>Ending</h3>
+
+        <p>Lorem ipsum dolor amet single-origin coffee jean shorts church-key occupy, chia woke narwhal hoodie.</p>
+    </div>
+
+    <div class="column">Lorem ipsum dolor amet single-origin coffee jean shorts church-key occupy, chia woke narwhal hoodie. PBR&amp;B copper mug tbh adaptogen vegan. Sartorial seitan palo santo, waistcoat beard neutra meditation venmo vexillologist small batch gastropub cloud bread sustainable asymmetrical DIY.<br />
+        <br />
+        <a class="sm-button" href="">Learn More</a></div>
+</div>
+
+<div class="med-spacer">&nbsp;</div>
+
+<div class="column-container">
+    <div class="column">
+        <h3>Neutral</h3>
+
+        <p>Lorem ipsum dolor amet single-origin coffee jean shorts church-key occupy, chia woke narwhal hoodie.</p>
+    </div>
+
+    <div class="column">Lorem ipsum dolor amet single-origin coffee jean shorts church-key occupy, chia woke narwhal hoodie. PBR&amp;B copper mug tbh adaptogen vegan. Sartorial seitan palo santo, waistcoat beard neutra meditation venmo vexillologist small batch gastropub cloud bread sustainable asymmetrical DIY.<br />
+        <br />
+        <a class="sm-button" href="">Learn More</a></div>
+</div>
+
+<div class="med-spacer">&nbsp;</div>
+
+<div class="column-container">
+    <div class="column">
+        <h3>New Beginning</h3>
+
+        <p>Lorem ipsum dolor amet single-origin coffee jean shorts church-key occupy, chia woke narwhal hoodie.</p>
+    </div>
+
+    <div class="column">Lorem ipsum dolor amet single-origin coffee jean shorts church-key occupy, chia woke narwhal hoodie. PBR&amp;B copper mug tbh adaptogen vegan. Sartorial seitan palo santo, waistcoat beard neutra meditation venmo vexillologist small batch gastropub cloud bread sustainable asymmetrical DIY.<br />
+        <br />
+        <a class="sm-button" href="">Learn More</a></div>
+</div>
+
+<div class="med-spacer">&nbsp;</div>

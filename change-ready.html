@@ -1,0 +1,164 @@
+<style>
+    
+    img {
+        width: auto;
+        height: auto;
+    }
+    
+    
+    .big-spacer {
+        margin: 75px 0px;
+    }
+
+    .med-spacer {
+        margin: 40px 0px;
+    }
+
+    /*RESOURCE CARDS*/
+
+    .resource-cards {
+        width: 100%;
+        max-width: 1240px;
+        margin: 0;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+
+    }
+    
+    @media only screen and (min-width: 850px) {
+        .resource-cards {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .card {
+        background: white;
+        text-decoration: none;
+        color: #444;
+        border: 1px solid dimgrey;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        position: relative;
+        top: 0;
+        transition: all .1s ease-in;
+    }
+
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2)
+    }
+
+    .card .thumbnail {
+        margin: 5% 1% 0 5%;
+    }
+
+    .card article {
+        padding: 20px;
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card h1 {
+        font-size: 20px;
+        font-family: TurnerBold, Arial, Helvetica, sans-serif;
+        margin: 0;
+        color: #333;
+        line-height: 120%;
+    }
+
+    .card p {
+        line-height: 1.4;
+        flex: 1;
+        font-size: 1rem;
+    }
+
+    .card span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        margin: 2em 0 0 0;
+        line-height: 135%;
+    }
+
+    /*NAVIGATION*/
+
+    .nav-bar-in ul li:before {
+        background-image: none;
+    }
+
+    .nav-bar-in ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .nav-bar-in li {
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .nav-bar-in li a {
+        display: block;
+        color: #fff;
+        font-family: TurnerBold;
+        font-size: 14px;
+        text-align: center;
+        padding: 14px 10px;
+        text-decoration: none;
+    }
+
+    .nav-bar-in li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    .nav-bar-in .active {
+        background-color: #0052e7;
+        cursor: default;
+    }
+
+</style>
+
+<div class="nav-bar-in">
+    <ul>
+        <li><a href="https://now.turner.com/change" class="active">Home</a></li>
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+    </ul>
+</div>
+
+<br />
+<br />
+
+<h2>New Beginnings: <em>I'm Ready!</em></h2>
+<p>If you're starting to feel "yourself" again (energized, excited about the work you're doing, etc.), you're likely in a state we call "new beginnings."</p>
+
+<img src="https://s3.amazonaws.com/tpd-images/Change-Curve_New-Beginnings.png">
+
+<br />
+<br />
+
+<div class="resource-cards">
+    <div class="resource">
+        <a href="https://s3.amazonaws.com/tpd-files/Change/Ready/SOAR-Worksheet.pptx" class="card" target="_blank">
+            <div class="thumbnail">
+                <img src="https://s3.amazonaws.com/tpd-files/images/tool-ico.png">
+                <h1>SOAR Worksheet &amp; Action Plan</h1>
+            </div>
+            <article>
+                <p>This individual exercise will help you feel more confident in your new reality.</p>
+            </article>
+        </a>
+    </div>
+</div>
